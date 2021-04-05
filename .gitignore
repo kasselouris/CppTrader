@@ -18,3 +18,10 @@ modules/*
 # Temporary
 .idea
 temp
+
+# Mine
+Makefile
+CMakeFiles
+*.a
+cpptrader-*
+

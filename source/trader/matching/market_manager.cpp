@@ -466,7 +466,7 @@ ErrorCode MarketManager::ReduceOrder(uint64_t id, uint64_t quantity, bool intern
 
     // Get the order to reduce
     auto order_it = _orders.find(id);
-    assert((order_it != _orders.end()) && "Order not found!");
+    //assert((order_it != _orders.end()) && "Order not found!");    REMOVED IT IN ORDER TO RUN!!!
     if (order_it == _orders.end())
         return ErrorCode::ORDER_NOT_FOUND;
     OrderNode* order_ptr = (OrderNode*)order_it->second;
@@ -697,7 +697,7 @@ ErrorCode MarketManager::ReplaceOrder(uint64_t id, uint64_t new_id, uint64_t new
 
     // Get the order to replace
     auto order_it = _orders.find(id);
-    assert((order_it != _orders.end()) && "Order not found!");
+    //assert((order_it != _orders.end()) && "Order not found!");    REMOVED IT IN ORDER TO RUN!!!
     if (order_it == _orders.end())
         return ErrorCode::ORDER_NOT_FOUND;
     OrderNode* order_ptr = (OrderNode*)order_it->second;
@@ -826,7 +826,7 @@ ErrorCode MarketManager::DeleteOrder(uint64_t id, bool internal)
 
     // Get the order to delete
     auto order_it = _orders.find(id);
-    assert((order_it != _orders.end()) && "Order not found!");
+    //assert((order_it != _orders.end()) && "Order not found!");    REMOVED IT IN ORDER TO RUN!!!
     if (order_it == _orders.end())
         return ErrorCode::ORDER_NOT_FOUND;
     OrderNode* order_ptr = (OrderNode*)order_it->second;

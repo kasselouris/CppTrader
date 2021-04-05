@@ -1,0 +1,790 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 32.78     77.40    77.40 136853320     0.00     0.00  CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*)
+ 17.34    118.35    40.95 114360997     0.00     0.00  CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool)
+  9.79    141.46    23.11 118631456     0.00     0.00  CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool)
+  8.28    161.00    19.54 133069733     0.00     0.00  CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*)
+  5.84    174.79    13.79 39833537     0.00     0.00  CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::erase(CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&)
+  5.15    186.95    12.16 139815986     0.00     0.00  CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*)
+  4.52    197.63    10.68 21639067     0.00     0.00  CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool)
+  4.34    207.88    10.25 260384075     0.00     0.00  CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool)
+  2.56    213.92     6.04 308646802     0.00     0.00  CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&)
+  1.20    216.76     2.84 254469884     0.00     0.00  CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*)
+  1.00    219.11     2.35 508939768     0.00     0.00  CppTrader::Matching::MarketManager::RecalculateTrailingStopPrice(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*)
+  0.97    221.41     2.30 39902022     0.00     0.00  CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*)
+  0.89    223.51     2.10  8701867     0.00     0.00  CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool)
+  0.87    225.56     2.05 1017879536     0.00     0.00  CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*, unsigned long)
+  0.73    227.29     1.73                             CppTrader::ITCH::ITCHHandler::Process(void*, unsigned long)
+  0.71    228.95     1.67 39833537     0.00     0.00  CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*)
+  0.52    230.18     1.23 278605939     0.00     0.00  CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const
+  0.27    230.83     0.65  8682886     0.00     0.00  CppTrader::Matching::OrderBook::ReduceOrder(CppTrader::Matching::OrderNode*, unsigned long, unsigned long, unsigned long)
+  0.26    231.45     0.62 278605939     0.00     0.00  MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool)
+  0.23    231.99     0.55 117145568     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&)
+  0.14    232.33     0.34 198870380     0.00     0.00  MyMarketHandler::onUpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool)
+  0.13    232.63     0.31 118631456     0.00     0.00  CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&)
+  0.12    232.92     0.29 118631456     0.00     0.00  CppTrader::Matching::Order::Validate() const
+  0.10    233.16     0.24                             CppTrader::Matching::MarketManager::DeleteOrderBook(unsigned int)
+  0.10    233.39     0.24 139815986     0.00     0.00  MyMarketHandler::onAddOrder(CppTrader::Matching::Order const&)
+  0.10    233.62     0.23 114360997     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&)
+  0.09    233.82     0.21                             CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::rehash(unsigned long)
+  0.07    234.00     0.18       16    10.94    10.94  CppCommon::HashMapConstIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapConstIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > const*)
+  0.07    234.16     0.17 139630304     0.00     0.00  MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&)
+  0.07    234.32     0.16 21639067     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&)
+  0.07    234.48     0.16                             CppTrader::Matching::MarketManager::AddStopLimitOrder(CppTrader::Matching::Order const&, bool)
+  0.06    234.63     0.15  2787676     0.00     0.00  CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long)
+  0.06    234.78     0.15                             CppTrader::Matching::OrderBook::DeleteTrailingStopOrder(CppTrader::Matching::OrderNode*)
+  0.06    234.91     0.13                             CppTrader::Matching::MarketManager::AddStopOrder(CppTrader::Matching::Order const&, bool)
+  0.05    235.02     0.11 39902022     0.00     0.00  MyMarketHandler::onAddLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool)
+  0.05    235.13     0.11                             CppCommon::StdInput::Impl::Read(void*, unsigned long)
+  0.04    235.23     0.11 147651245     0.00     0.00  CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*)
+  0.04    235.34     0.11 39833537     0.00     0.00  MyMarketHandler::onDeleteLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool)
+  0.03    235.41     0.08  1485888     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&)
+  0.03    235.48     0.07 114360997     0.00     0.00  CppTrader::Matching::MarketManager::DeleteOrder(unsigned long)
+  0.03    235.55     0.07        8     8.75     8.75  std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::_M_fill_insert(__gnu_cxx::__normal_iterator<std::pair<unsigned long, CppTrader::Matching::OrderNode*>*, std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > >, unsigned long, std::pair<unsigned long, CppTrader::Matching::OrderNode*> const&)
+  0.03    235.61     0.06  1817946     0.00     0.00  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char*, std::forward_iterator_tag)
+  0.03    235.67     0.06                             CppTrader::Matching::MarketManager::~MarketManager()
+  0.02    235.72     0.05     8906     0.01     0.01  CppTrader::Matching::OrderBook::~OrderBook()
+  0.02    235.77     0.05                             CppCommon::Reader::ReadAllLines[abi:cxx11]()
+  0.02    235.82     0.05                             CppCommon::StdInput::Read(void*, unsigned long)
+  0.02    235.86     0.05                             CppCommon::StdInput::StdInput()
+  0.01    235.90     0.04  2787676     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&)
+  0.01    235.93     0.03     8906     0.00     0.00  MyMarketHandler::onAddOrderBook(CppTrader::Matching::OrderBook const&)
+  0.01    235.96     0.03                             CppTrader::ITCH::ITCHHandler::ProcessUnknownMessage(void*, unsigned long)
+  0.01    235.99     0.03 11828382     0.00     0.00  MyMarketHandler::onExecuteOrder(CppTrader::Matching::Order const&, unsigned long, unsigned long)
+  0.01    236.01     0.03  5084981     0.00     0.00  MyMarketHandler::onUpdateOrder(CppTrader::Matching::Order const&)
+  0.01    236.04     0.03                             CppTrader::Matching::OrderBook::AddTrailingStopOrder(CppTrader::Matching::OrderNode*)
+  0.01    236.06     0.02                             MyITCHHandler::~MyITCHHandler()
+  0.01    236.07     0.02                             MyMarketHandler::onDeleteOrderBook(CppTrader::Matching::OrderBook const&)
+  0.01    236.09     0.02 21639067     0.00     0.00  CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long)
+  0.00    236.10     0.01  5722824     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedMessage const&)
+  0.00    236.11     0.01    68485     0.00     0.00  CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode>::operator++()
+  0.00    236.12     0.01                             CppTrader::Matching::MarketManager::ActivateStopLimitOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::OrderNode*)
+  0.00    236.12     0.00  4024315     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::NOIIMessage const&)
+  0.00    236.12     0.00  1218602     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::TradeMessage const&)
+  0.00    236.12     0.00   215161     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::MarketParticipantPositionMessage const&)
+  0.00    236.12     0.00    99917     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedWithPriceMessage const&)
+  0.00    236.12     0.00    17836     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::CrossTradeMessage const&)
+  0.00    236.12     0.00     9013     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::RegSHOMessage const&)
+  0.00    236.12     0.00     8966     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::StockTradingActionMessage const&)
+  0.00    236.12     0.00     8906     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&)
+  0.00    236.12     0.00     8906     0.00     0.00  MyMarketHandler::onAddSymbol(CppTrader::Matching::Symbol const&)
+  0.00    236.12     0.00     8906     0.00     0.00  CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&)
+  0.00    236.12     0.00     8906     0.00     0.00  CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&)
+  0.00    236.12     0.00     8906     0.00     0.00  CppTrader::Matching::OrderBook::OrderBook(CppTrader::Matching::MarketManager&, CppTrader::Matching::Symbol const&)
+  0.00    236.12     0.00     8906     0.00     0.00  std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::Symbol**, std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> > >, unsigned long, CppTrader::Matching::Symbol* const&)
+  0.00    236.12     0.00     8906     0.00     0.00  std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::OrderBook**, std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> > >, unsigned long, CppTrader::Matching::OrderBook* const&)
+  0.00    236.12     0.00       46     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+  0.00    236.12     0.00       34     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::LULDAuctionCollarMessage const&)
+  0.00    236.12     0.00       32     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00    236.12     0.00       15     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*)
+  0.00    236.12     0.00       10     0.00     0.00  std::__cxx11::_List_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()
+  0.00    236.12     0.00        6     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::SystemEventMessage const&)
+  0.00    236.12     0.00        5     0.00     0.00  std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear()
+  0.00    236.12     0.00        5     0.00     0.00  std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&)
+  0.00    236.12     0.00        5     0.00     0.00  std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        5     0.00     0.00  std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&)
+  0.00    236.12     0.00        5     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        4     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+  0.00    236.12     0.00        4     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >*)
+  0.00    236.12     0.00        4     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)
+  0.00    236.12     0.00        3     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::IPOQuotingMessage const&)
+  0.00    236.12     0.00        3     0.00     0.00  optparse::OptionParser::get_parser()
+  0.00    236.12     0.00        3     0.00     0.00  optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+  0.00    236.12     0.00        3     0.00     0.00  optparse::str_replace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        3     0.00     0.00  std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::_M_resize_pos(unsigned long&) const
+  0.00    236.12     0.00        3     0.00     0.00  std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&)
+  0.00    236.12     0.00        3     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >*)
+  0.00    236.12     0.00        2     0.00     0.00  optparse::Option::action(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        2     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12CppBenchmark15ReporterConsole12ReportHeaderEv
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN3fmt2v76detail11assert_failEPKciS3_
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN8optparse15OptionContainer10add_optionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CppCommon4File18DEFAULT_ATTRIBUTESE
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CppCommon5fatalERKNS_14SourceLocationERKNS_10StackTraceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CppTrader4ITCH11ITCHHandler7ProcessEPvm
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CppTrader8Matching13MarketManager8_defaultE
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CppTrader8Matching9OrderBookC2ERNS0_13MarketManagerERKNS0_6SymbolE
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZNK9CppTrader8Matching5Order8ValidateEv
+  0.00    236.12     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00    236.12     0.00        1     0.00     0.00  MyITCHHandler::onMessage(CppTrader::ITCH::MWCBDeclineMessage const&)
+  0.00    236.12     0.00        1     0.00     0.00  optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+  0.00    236.12     0.00        1     0.00     0.00  optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        1     0.00     0.00  optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    236.12     0.00        1     0.00     0.00  void std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_assign_dispatch<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__false_type)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.00% of 236.12 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.4    1.73  233.04                 CppTrader::ITCH::ITCHHandler::Process(void*, unsigned long) [1]
+              120.30  112.67 268744780/268744780     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+                0.06    0.00 1817946/1817946     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char*, std::forward_iterator_tag) [45]
+-----------------------------------------------
+[2]     98.7  120.30  112.67 268744780+497198410 <cycle 1 as a whole> [2]
+                6.04   80.42 308646802+268744780     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+               77.40    0.00 136853320             CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*) <cycle 1> [6]
+               23.11   22.05 118631456             CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+               10.68    9.60 21639067             CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                2.30    0.00 39902022             CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*) <cycle 1> [17]
+                0.55    0.58 117145568             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) <cycle 1> [22]
+                0.16    0.02 21639067             MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) <cycle 1> [30]
+                0.08    0.01 1485888             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) <cycle 1> [42]
+-----------------------------------------------
+                             268744780             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+                             39902022             CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*) <cycle 1> [17]
+              120.30  112.67 268744780/268744780     CppTrader::ITCH::ITCHHandler::Process(void*, unsigned long) [1]
+[3]     36.6    6.04   80.42 308646802+268744780 CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+                0.23   78.69 114360997/114360997     MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&) [4]
+                0.04    1.42 2787676/2787676     MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&) [20]
+                0.00    0.03    8906/8906        MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&) [50]
+                0.01    0.00 5722824/5722824     MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedMessage const&) [60]
+                0.00    0.00 4024315/4024315     MyITCHHandler::onMessage(CppTrader::ITCH::NOIIMessage const&) [187]
+                0.00    0.00 1218602/1218602     MyITCHHandler::onMessage(CppTrader::ITCH::TradeMessage const&) [188]
+                0.00    0.00  215161/215161      MyITCHHandler::onMessage(CppTrader::ITCH::MarketParticipantPositionMessage const&) [189]
+                0.00    0.00   99917/99917       MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedWithPriceMessage const&) [190]
+                0.00    0.00   17836/17836       MyITCHHandler::onMessage(CppTrader::ITCH::CrossTradeMessage const&) [191]
+                0.00    0.00    9013/9013        MyITCHHandler::onMessage(CppTrader::ITCH::RegSHOMessage const&) [192]
+                0.00    0.00    8966/8966        MyITCHHandler::onMessage(CppTrader::ITCH::StockTradingActionMessage const&) [193]
+                0.00    0.00      34/34          MyITCHHandler::onMessage(CppTrader::ITCH::LULDAuctionCollarMessage const&) [200]
+                0.00    0.00       6/6           MyITCHHandler::onMessage(CppTrader::ITCH::SystemEventMessage const&) [204]
+                0.00    0.00       3/3           MyITCHHandler::onMessage(CppTrader::ITCH::IPOQuotingMessage const&) [213]
+                0.00    0.00       1/1           MyITCHHandler::onMessage(CppTrader::ITCH::MWCBDeclineMessage const&) [232]
+                             117145568             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) <cycle 1> [22]
+                             21639067             MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) <cycle 1> [30]
+                             1485888             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) <cycle 1> [42]
+                             268744780             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+-----------------------------------------------
+                0.23   78.69 114360997/114360997     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[4]     33.4    0.23   78.69 114360997         MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&) [4]
+               40.95   37.67 114360997/114360997     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+                0.07    0.00 114360997/114360997     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long) [43]
+-----------------------------------------------
+               40.95   37.67 114360997/114360997     MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&) [4]
+[5]     33.3   40.95   37.67 114360997         CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+               16.43   12.55 111885203/133069733     CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*) [8]
+                4.40    3.11 111885203/260384075     CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+                0.49    0.22 111885203/278605939     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+                0.25    0.00 111885203/278605939     MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [23]
+                0.13    0.00 111885203/139630304     MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [32]
+                0.08    0.00 116836791/147651245     CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [40]
+-----------------------------------------------
+                             20761365             CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                             116091955             CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[6]     32.8   77.40    0.00 136853320         CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*) <cycle 1> [6]
+                             39902022             CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*) <cycle 1> [17]
+-----------------------------------------------
+                             1485888             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) <cycle 1> [42]
+                             117145568             MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) <cycle 1> [22]
+[7]     19.1   23.11   22.05 118631456         CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+               10.32    2.31 118631456/139815986     CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [12]
+                4.67    3.30 118631456/260384075     CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+                0.51    0.23 116091955/278605939     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+                0.26    0.00 116091955/278605939     MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [23]
+                0.20    0.00 118631456/139815986     MyMarketHandler::onAddOrder(CppTrader::Matching::Order const&) [28]
+                0.18    0.00      16/16          CppCommon::HashMapConstIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapConstIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > const*) [31]
+                0.07    0.00       8/8           std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::_M_fill_insert(__gnu_cxx::__normal_iterator<std::pair<unsigned long, CppTrader::Matching::OrderNode*>*, std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > >, unsigned long, std::pair<unsigned long, CppTrader::Matching::OrderNode*> const&) [44]
+                0.00    0.00 2539501/139630304     MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [32]
+                             116091955             CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*) <cycle 1> [6]
+-----------------------------------------------
+                3.11    2.38 21184530/133069733     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+               16.43   12.55 111885203/133069733     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+[8]     14.6   19.54   14.92 133069733         CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*) [8]
+                1.61   13.32 38463558/39833537     CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*) [11]
+-----------------------------------------------
+                             21639067             MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) <cycle 1> [30]
+[9]      8.6   10.68    9.60 21639067         CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                3.11    2.38 21184530/133069733     CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*) [8]
+                1.84    0.41 21184530/139815986     CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [12]
+                0.83    0.59 21184530/260384075     CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+                0.19    0.08 41945895/278605939     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+                0.09    0.00 41945895/278605939     MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [23]
+                0.04    0.00 21184530/139815986     MyMarketHandler::onAddOrder(CppTrader::Matching::Order const&) [28]
+                0.03    0.00 21607695/139630304     MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [32]
+                0.02    0.00 22093604/147651245     CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [40]
+                             20761365             CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*) <cycle 1> [6]
+-----------------------------------------------
+                0.34    0.24 8682886/260384075     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.83    0.59 21184530/260384075     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                4.40    3.11 111885203/260384075     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+                4.67    3.30 118631456/260384075     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[10]     7.4   10.25    7.24 260384075         CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+                2.84    4.40 254469884/254469884     CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*) [14]
+-----------------------------------------------
+                0.06    0.47 1369979/39833537     CppTrader::Matching::OrderBook::ReduceOrder(CppTrader::Matching::OrderNode*, unsigned long, unsigned long, unsigned long) [21]
+                1.61   13.32 38463558/39833537     CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*) [8]
+[11]     6.5    1.67   13.79 39833537         CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*) [11]
+               13.79    0.00 39833537/39833537     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::erase(CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&) [13]
+-----------------------------------------------
+                1.84    0.41 21184530/139815986     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+               10.32    2.31 118631456/139815986     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[12]     6.3   12.16    2.73 139815986         CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [12]
+                1.43    1.27 5914191/8701867     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.03    0.00 11828382/11828382     MyMarketHandler::onExecuteOrder(CppTrader::Matching::Order const&, unsigned long, unsigned long) [54]
+-----------------------------------------------
+               13.79    0.00 39833537/39833537     CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*) [11]
+[13]     5.8   13.79    0.00 39833537         CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::erase(CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&) [13]
+-----------------------------------------------
+                2.84    4.40 254469884/254469884     CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+[14]     3.1    2.84    4.40 254469884         CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*) [14]
+                2.35    0.00 508939768/508939768     CppTrader::Matching::MarketManager::RecalculateTrailingStopPrice(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*) [16]
+                2.05    0.00 1017879536/1017879536     CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*, unsigned long) [18]
+-----------------------------------------------
+                0.67    0.60 2787676/8701867     MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&) [20]
+                1.43    1.27 5914191/8701867     CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [12]
+[15]     1.7    2.10    1.87 8701867         CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.65    0.53 8682886/8682886     CppTrader::Matching::OrderBook::ReduceOrder(CppTrader::Matching::OrderNode*, unsigned long, unsigned long, unsigned long) [21]
+                0.34    0.24 8682886/260384075     CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool) [10]
+                0.04    0.02 8682886/278605939     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+                0.03    0.00 5084981/5084981     MyMarketHandler::onUpdateOrder(CppTrader::Matching::Order const&) [55]
+                0.02    0.00 8682886/278605939     MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [23]
+                0.01    0.00 8720848/147651245     CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [40]
+                0.00    0.00 3597905/139630304     MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [32]
+-----------------------------------------------
+                2.35    0.00 508939768/508939768     CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*) [14]
+[16]     1.0    2.35    0.00 508939768         CppTrader::Matching::MarketManager::RecalculateTrailingStopPrice(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*) [16]
+-----------------------------------------------
+                             39902022             CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*) <cycle 1> [6]
+[17]     1.0    2.30    0.00 39902022         CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*) <cycle 1> [17]
+                             39902022             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+-----------------------------------------------
+                2.05    0.00 1017879536/1017879536     CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*) [14]
+[18]     0.9    2.05    0.00 1017879536         CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*, unsigned long) [18]
+-----------------------------------------------
+                0.04    0.02 8682886/278605939     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.19    0.08 41945895/278605939     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                0.49    0.22 111885203/278605939     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+                0.51    0.23 116091955/278605939     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[19]     0.8    1.23    0.55 278605939         CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+                0.34    0.00 198870380/198870380     MyMarketHandler::onUpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [25]
+                0.11    0.00 39902022/39902022     MyMarketHandler::onAddLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [38]
+                0.11    0.00 39833537/39833537     MyMarketHandler::onDeleteLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [41]
+-----------------------------------------------
+                0.04    1.42 2787676/2787676     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[20]     0.6    0.04    1.42 2787676         MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&) [20]
+                0.67    0.60 2787676/8701867     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.15    0.00 2787676/2787676     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long) [34]
+-----------------------------------------------
+                0.65    0.53 8682886/8682886     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+[21]     0.5    0.65    0.53 8682886         CppTrader::Matching::OrderBook::ReduceOrder(CppTrader::Matching::OrderNode*, unsigned long, unsigned long, unsigned long) [21]
+                0.06    0.47 1369979/39833537     CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*) [11]
+-----------------------------------------------
+                             117145568             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[22]     0.5    0.55    0.58 117145568         MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) <cycle 1> [22]
+                0.30    0.28 117145568/118631456     CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&) [24]
+                             117145568             CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+-----------------------------------------------
+                0.02    0.00 8682886/278605939     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.09    0.00 41945895/278605939     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                0.25    0.00 111885203/278605939     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+                0.26    0.00 116091955/278605939     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[23]     0.3    0.62    0.00 278605939         MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [23]
+-----------------------------------------------
+                0.00    0.00 1485888/118631456     MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) <cycle 1> [42]
+                0.30    0.28 117145568/118631456     MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) <cycle 1> [22]
+[24]     0.2    0.31    0.29 118631456         CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&) [24]
+                0.29    0.00 118631456/118631456     CppTrader::Matching::Order::Validate() const [26]
+-----------------------------------------------
+                0.34    0.00 198870380/198870380     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+[25]     0.1    0.34    0.00 198870380         MyMarketHandler::onUpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [25]
+-----------------------------------------------
+                0.29    0.00 118631456/118631456     CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&) [24]
+[26]     0.1    0.29    0.00 118631456         CppTrader::Matching::Order::Validate() const [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     0.1    0.24    0.00                 CppTrader::Matching::MarketManager::DeleteOrderBook(unsigned int) [27]
+-----------------------------------------------
+                0.04    0.00 21184530/139815986     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                0.20    0.00 118631456/139815986     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[28]     0.1    0.24    0.00 139815986         MyMarketHandler::onAddOrder(CppTrader::Matching::Order const&) [28]
+-----------------------------------------------
+                                                 <spontaneous>
+[29]     0.1    0.21    0.00                 CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::rehash(unsigned long) [29]
+-----------------------------------------------
+                             21639067             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[30]     0.1    0.16    0.02 21639067         MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) <cycle 1> [30]
+                0.02    0.00 21639067/21639067     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long) [59]
+                             21639067             CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+-----------------------------------------------
+                0.18    0.00      16/16          CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[31]     0.1    0.18    0.00      16         CppCommon::HashMapConstIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapConstIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > const*) [31]
+-----------------------------------------------
+                0.00    0.00 2539501/139630304     CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+                0.00    0.00 3597905/139630304     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.03    0.00 21607695/139630304     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                0.13    0.00 111885203/139630304     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+[32]     0.1    0.17    0.00 139630304         MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     0.1    0.16    0.00                 CppTrader::Matching::MarketManager::AddStopLimitOrder(CppTrader::Matching::Order const&, bool) [33]
+-----------------------------------------------
+                0.15    0.00 2787676/2787676     MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&) [20]
+[34]     0.1    0.15    0.00 2787676         CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long) [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[35]     0.1    0.15    0.00                 CppTrader::Matching::OrderBook::DeleteTrailingStopOrder(CppTrader::Matching::OrderNode*) [35]
+-----------------------------------------------
+                                                 <spontaneous>
+[36]     0.1    0.13    0.00                 CppTrader::Matching::MarketManager::AddStopOrder(CppTrader::Matching::Order const&, bool) [36]
+-----------------------------------------------
+                                                 <spontaneous>
+[37]     0.1    0.06    0.06                 CppTrader::Matching::MarketManager::~MarketManager() [37]
+                0.05    0.01    8906/8906        CppTrader::Matching::OrderBook::~OrderBook() [46]
+                0.00    0.00       2/147651245     CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [40]
+-----------------------------------------------
+                0.11    0.00 39902022/39902022     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+[38]     0.0    0.11    0.00 39902022         MyMarketHandler::onAddLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [38]
+-----------------------------------------------
+                                                 <spontaneous>
+[39]     0.0    0.11    0.00                 CppCommon::StdInput::Impl::Read(void*, unsigned long) [39]
+-----------------------------------------------
+                0.00    0.00       2/147651245     CppTrader::Matching::MarketManager::~MarketManager() [37]
+                0.01    0.00 8720848/147651245     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+                0.02    0.00 22093604/147651245     CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) <cycle 1> [9]
+                0.08    0.00 116836791/147651245     CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [5]
+[40]     0.0    0.11    0.00 147651245         CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [40]
+-----------------------------------------------
+                0.11    0.00 39833537/39833537     CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const [19]
+[41]     0.0    0.11    0.00 39833537         MyMarketHandler::onDeleteLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [41]
+-----------------------------------------------
+                             1485888             CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[42]     0.0    0.08    0.01 1485888         MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) <cycle 1> [42]
+                0.00    0.00 1485888/118631456     CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&) [24]
+                             1485888             CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+-----------------------------------------------
+                0.07    0.00 114360997/114360997     MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&) [4]
+[43]     0.0    0.07    0.00 114360997         CppTrader::Matching::MarketManager::DeleteOrder(unsigned long) [43]
+-----------------------------------------------
+                0.07    0.00       8/8           CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) <cycle 1> [7]
+[44]     0.0    0.07    0.00       8         std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::_M_fill_insert(__gnu_cxx::__normal_iterator<std::pair<unsigned long, CppTrader::Matching::OrderNode*>*, std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > >, unsigned long, std::pair<unsigned long, CppTrader::Matching::OrderNode*> const&) [44]
+-----------------------------------------------
+                0.06    0.00 1817946/1817946     CppTrader::ITCH::ITCHHandler::Process(void*, unsigned long) [1]
+[45]     0.0    0.06    0.00 1817946         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char*, std::forward_iterator_tag) [45]
+-----------------------------------------------
+                0.05    0.01    8906/8906        CppTrader::Matching::MarketManager::~MarketManager() [37]
+[46]     0.0    0.05    0.01    8906         CppTrader::Matching::OrderBook::~OrderBook() [46]
+                0.01    0.00   68485/68485       CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode>::operator++() [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[47]     0.0    0.05    0.00                 CppCommon::Reader::ReadAllLines[abi:cxx11]() [47]
+-----------------------------------------------
+                                                 <spontaneous>
+[48]     0.0    0.05    0.00                 CppCommon::StdInput::Read(void*, unsigned long) [48]
+-----------------------------------------------
+                                                 <spontaneous>
+[49]     0.0    0.05    0.00                 CppCommon::StdInput::StdInput() [49]
+-----------------------------------------------
+                0.00    0.03    8906/8906        CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[50]     0.0    0.00    0.03    8906         MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&) [50]
+                0.00    0.03    8906/8906        CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [52]
+                0.00    0.00    8906/8906        CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&) [195]
+-----------------------------------------------
+                0.03    0.00    8906/8906        CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [52]
+[51]     0.0    0.03    0.00    8906         MyMarketHandler::onAddOrderBook(CppTrader::Matching::OrderBook const&) [51]
+-----------------------------------------------
+                0.00    0.03    8906/8906        MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&) [50]
+[52]     0.0    0.00    0.03    8906         CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [52]
+                0.03    0.00    8906/8906        MyMarketHandler::onAddOrderBook(CppTrader::Matching::OrderBook const&) [51]
+                0.00    0.00    8906/8906        CppTrader::Matching::OrderBook::OrderBook(CppTrader::Matching::MarketManager&, CppTrader::Matching::Symbol const&) [196]
+                0.00    0.00    8906/8906        std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::OrderBook**, std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> > >, unsigned long, CppTrader::Matching::OrderBook* const&) [198]
+-----------------------------------------------
+                                                 <spontaneous>
+[53]     0.0    0.03    0.00                 CppTrader::ITCH::ITCHHandler::ProcessUnknownMessage(void*, unsigned long) [53]
+-----------------------------------------------
+                0.03    0.00 11828382/11828382     CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [12]
+[54]     0.0    0.03    0.00 11828382         MyMarketHandler::onExecuteOrder(CppTrader::Matching::Order const&, unsigned long, unsigned long) [54]
+-----------------------------------------------
+                0.03    0.00 5084981/5084981     CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [15]
+[55]     0.0    0.03    0.00 5084981         MyMarketHandler::onUpdateOrder(CppTrader::Matching::Order const&) [55]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.0    0.03    0.00                 CppTrader::Matching::OrderBook::AddTrailingStopOrder(CppTrader::Matching::OrderNode*) [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[57]     0.0    0.02    0.00                 MyITCHHandler::~MyITCHHandler() [57]
+-----------------------------------------------
+                                                 <spontaneous>
+[58]     0.0    0.02    0.00                 MyMarketHandler::onDeleteOrderBook(CppTrader::Matching::OrderBook const&) [58]
+-----------------------------------------------
+                0.02    0.00 21639067/21639067     MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) <cycle 1> [30]
+[59]     0.0    0.02    0.00 21639067         CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long) [59]
+-----------------------------------------------
+                0.01    0.00 5722824/5722824     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[60]     0.0    0.01    0.00 5722824         MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedMessage const&) [60]
+-----------------------------------------------
+                0.01    0.00   68485/68485       CppTrader::Matching::OrderBook::~OrderBook() [46]
+[61]     0.0    0.01    0.00   68485         CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode>::operator++() [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[62]     0.0    0.01    0.00                 CppTrader::Matching::MarketManager::ActivateStopLimitOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::OrderNode*) [62]
+-----------------------------------------------
+                0.00    0.00 4024315/4024315     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[187]    0.0    0.00    0.00 4024315         MyITCHHandler::onMessage(CppTrader::ITCH::NOIIMessage const&) [187]
+-----------------------------------------------
+                0.00    0.00 1218602/1218602     CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[188]    0.0    0.00    0.00 1218602         MyITCHHandler::onMessage(CppTrader::ITCH::TradeMessage const&) [188]
+-----------------------------------------------
+                0.00    0.00  215161/215161      CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[189]    0.0    0.00    0.00  215161         MyITCHHandler::onMessage(CppTrader::ITCH::MarketParticipantPositionMessage const&) [189]
+-----------------------------------------------
+                0.00    0.00   99917/99917       CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[190]    0.0    0.00    0.00   99917         MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedWithPriceMessage const&) [190]
+-----------------------------------------------
+                0.00    0.00   17836/17836       CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[191]    0.0    0.00    0.00   17836         MyITCHHandler::onMessage(CppTrader::ITCH::CrossTradeMessage const&) [191]
+-----------------------------------------------
+                0.00    0.00    9013/9013        CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[192]    0.0    0.00    0.00    9013         MyITCHHandler::onMessage(CppTrader::ITCH::RegSHOMessage const&) [192]
+-----------------------------------------------
+                0.00    0.00    8966/8966        CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[193]    0.0    0.00    0.00    8966         MyITCHHandler::onMessage(CppTrader::ITCH::StockTradingActionMessage const&) [193]
+-----------------------------------------------
+                0.00    0.00    8906/8906        CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&) [195]
+[194]    0.0    0.00    0.00    8906         MyMarketHandler::onAddSymbol(CppTrader::Matching::Symbol const&) [194]
+-----------------------------------------------
+                0.00    0.00    8906/8906        MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&) [50]
+[195]    0.0    0.00    0.00    8906         CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&) [195]
+                0.00    0.00    8906/8906        std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::Symbol**, std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> > >, unsigned long, CppTrader::Matching::Symbol* const&) [197]
+                0.00    0.00    8906/8906        MyMarketHandler::onAddSymbol(CppTrader::Matching::Symbol const&) [194]
+-----------------------------------------------
+                0.00    0.00    8906/8906        CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [52]
+[196]    0.0    0.00    0.00    8906         CppTrader::Matching::OrderBook::OrderBook(CppTrader::Matching::MarketManager&, CppTrader::Matching::Symbol const&) [196]
+-----------------------------------------------
+                0.00    0.00    8906/8906        CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&) [195]
+[197]    0.0    0.00    0.00    8906         std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::Symbol**, std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> > >, unsigned long, CppTrader::Matching::Symbol* const&) [197]
+-----------------------------------------------
+                0.00    0.00    8906/8906        CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [52]
+[198]    0.0    0.00    0.00    8906         std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::OrderBook**, std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> > >, unsigned long, CppTrader::Matching::OrderBook* const&) [198]
+-----------------------------------------------
+                0.00    0.00       1/46          optparse::OptionParser::OptionParser() [419]
+                0.00    0.00       1/46          optparse::OptionParser::parse_args(int, char const* const*) [412]
+                0.00    0.00       2/46          optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [234]
+                0.00    0.00       3/46          optparse::str_replace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [216]
+                0.00    0.00       5/46          optparse::OptionParser::OptionParser(optparse::OptionParser const&) [420]
+                0.00    0.00       5/46          std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [208]
+                0.00    0.00       8/46          optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [235]
+                0.00    0.00      21/46          std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&) [218]
+[199]    0.0    0.00    0.00      46         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+-----------------------------------------------
+                0.00    0.00      34/34          CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[200]    0.0    0.00    0.00      34         MyITCHHandler::onMessage(CppTrader::ITCH::LULDAuctionCollarMessage const&) [200]
+-----------------------------------------------
+                0.00    0.00       1/32          optparse::OptionParser::parse_args(int, char const* const*) [412]
+                0.00    0.00       2/32          optparse::OptionParser::OptionParser() [419]
+                0.00    0.00       7/32          optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+                0.00    0.00      22/32          optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[201]    0.0    0.00    0.00      32         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [201]
+-----------------------------------------------
+                                   5             std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [202]
+                0.00    0.00       1/15          optparse::Values::~Values() [430]
+                0.00    0.00       2/15          optparse::OptionParser::~OptionParser() [422]
+                0.00    0.00       6/15          std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear() [205]
+                0.00    0.00       6/15          optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[202]    0.0    0.00    0.00      15+5       std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [202]
+                                   5             std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [202]
+-----------------------------------------------
+                0.00    0.00       3/10          std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear() [205]
+                0.00    0.00       3/10          optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+                0.00    0.00       4/10          optparse::OptionParser::~OptionParser() [422]
+[203]    0.0    0.00    0.00      10         std::__cxx11::_List_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear() [203]
+-----------------------------------------------
+                0.00    0.00       6/6           CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[204]    0.0    0.00    0.00       6         MyITCHHandler::onMessage(CppTrader::ITCH::SystemEventMessage const&) [204]
+-----------------------------------------------
+                0.00    0.00       2/5           optparse::OptionParser::~OptionParser() [422]
+                0.00    0.00       3/5           std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&) [218]
+[205]    0.0    0.00    0.00       5         std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear() [205]
+                0.00    0.00       6/15          std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [202]
+                0.00    0.00       3/10          std::__cxx11::_List_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear() [203]
+-----------------------------------------------
+                0.00    0.00       5/5           std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [207]
+[206]    0.0    0.00    0.00       5         std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) [206]
+-----------------------------------------------
+                0.00    0.00       5/5           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[207]    0.0    0.00    0.00       5         std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [207]
+                0.00    0.00       5/5           std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) [206]
+-----------------------------------------------
+                0.00    0.00       5/5           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[208]    0.0    0.00    0.00       5         std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [208]
+                0.00    0.00       5/46          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+                0.00    0.00       5/5           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [209]
+                0.00    0.00       2/2           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [221]
+-----------------------------------------------
+                0.00    0.00       5/5           std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [208]
+[209]    0.0    0.00    0.00       5         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [209]
+-----------------------------------------------
+                0.00    0.00       1/4           optparse::Values::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [669]
+                0.00    0.00       3/4           optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+[210]    0.0    0.00    0.00       4         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [210]
+-----------------------------------------------
+                                   5             std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >*) [211]
+                0.00    0.00       4/4           optparse::OptionParser::~OptionParser() [422]
+[211]    0.0    0.00    0.00       4+5       std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >*) [211]
+                                   5             std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >*) [211]
+-----------------------------------------------
+                0.00    0.00       4/4           optparse::OptionParser::~OptionParser() [422]
+[212]    0.0    0.00    0.00       4         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*) [212]
+-----------------------------------------------
+                0.00    0.00       3/3           CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[213]    0.0    0.00    0.00       3         MyITCHHandler::onMessage(CppTrader::ITCH::IPOQuotingMessage const&) [213]
+-----------------------------------------------
+                0.00    0.00       3/3           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[214]    0.0    0.00    0.00       3         optparse::OptionParser::get_parser() [214]
+-----------------------------------------------
+                0.00    0.00       1/3           optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [234]
+                0.00    0.00       2/3           optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [235]
+[215]    0.0    0.00    0.00       3         optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+                0.00    0.00      22/32          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [201]
+                0.00    0.00       6/15          std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [202]
+                0.00    0.00       5/5           std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [207]
+                0.00    0.00       5/5           std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [208]
+                0.00    0.00       3/3           optparse::OptionParser::get_parser() [214]
+                0.00    0.00       3/3           std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&) [218]
+                0.00    0.00       3/10          std::__cxx11::_List_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear() [203]
+                0.00    0.00       3/3           optparse::str_replace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [216]
+-----------------------------------------------
+                0.00    0.00       3/3           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[216]    0.0    0.00    0.00       3         optparse::str_replace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [216]
+                0.00    0.00       3/46          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+-----------------------------------------------
+                0.00    0.00       3/3           std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&) [218]
+[217]    0.0    0.00    0.00       3         std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::_M_resize_pos(unsigned long&) const [217]
+-----------------------------------------------
+                0.00    0.00       3/3           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+[218]    0.0    0.00    0.00       3         std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&) [218]
+                0.00    0.00      21/46          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+                0.00    0.00       3/3           std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::_M_resize_pos(unsigned long&) const [217]
+                0.00    0.00       3/5           std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear() [205]
+-----------------------------------------------
+                0.00    0.00       1/3           optparse::Values::~Values() [430]
+                0.00    0.00       2/3           optparse::OptionParser::~OptionParser() [422]
+[219]    0.0    0.00    0.00       3         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >*) [219]
+-----------------------------------------------
+                0.00    0.00       2/2           optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+[220]    0.0    0.00    0.00       2         optparse::Option::action(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [220]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [208]
+[221]    0.0    0.00    0.00       2         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [221]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[222]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12CppBenchmark15ReporterConsole12ReportHeaderEv [222]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[223]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN3fmt2v76detail11assert_failEPKciS3_ [223]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[224]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN8optparse15OptionContainer10add_optionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [224]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[225]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CppCommon4File18DEFAULT_ATTRIBUTESE [225]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[226]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CppCommon5fatalERKNS_14SourceLocationERKNS_10StackTraceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi [226]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[227]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CppTrader4ITCH11ITCHHandler7ProcessEPvm [227]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[228]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CppTrader8Matching13MarketManager8_defaultE [228]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[229]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CppTrader8Matching9OrderBookC2ERNS0_13MarketManagerERKNS0_6SymbolE [229]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[230]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZNK9CppTrader8Matching5Order8ValidateEv [230]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [903]
+[231]    0.0    0.00    0.00       1         _GLOBAL__sub_I_main [231]
+-----------------------------------------------
+                0.00    0.00       1/1           CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) <cycle 1> [3]
+[232]    0.0    0.00    0.00       1         MyITCHHandler::onMessage(CppTrader::ITCH::MWCBDeclineMessage const&) [232]
+-----------------------------------------------
+                0.00    0.00       1/1           optparse::OptionParser::parse_args(int, char const* const*) [412]
+[233]    0.0    0.00    0.00       1         optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+                0.00    0.00       7/32          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [201]
+                0.00    0.00       3/4           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [210]
+                0.00    0.00       2/2           optparse::Option::action(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [220]
+                0.00    0.00       1/1           void std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_assign_dispatch<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__false_type) [236]
+                0.00    0.00       1/1           optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [234]
+                0.00    0.00       1/1           optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [235]
+-----------------------------------------------
+                0.00    0.00       1/1           optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+[234]    0.0    0.00    0.00       1         optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [234]
+                0.00    0.00       2/46          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+                0.00    0.00       1/3           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+-----------------------------------------------
+                0.00    0.00       1/1           optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+[235]    0.0    0.00    0.00       1         optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [235]
+                0.00    0.00       8/46          void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [199]
+                0.00    0.00       2/3           optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [215]
+-----------------------------------------------
+                0.00    0.00       1/1           optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [233]
+[236]    0.0    0.00    0.00       1         void std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_assign_dispatch<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__false_type) [236]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [222] _GLOBAL__sub_I__ZN12CppBenchmark15ReporterConsole12ReportHeaderEv (reporter_console.cpp) [58] MyMarketHandler::onDeleteOrderBook(CppTrader::Matching::OrderBook const&) [24] CppTrader::Matching::MarketManager::AddOrder(CppTrader::Matching::Order const&)
+ [223] _GLOBAL__sub_I__ZN3fmt2v76detail11assert_failEPKciS3_ (format.cc) [23] MyMarketHandler::onUpdateOrderBook(CppTrader::Matching::OrderBook const&, bool) [195] CppTrader::Matching::MarketManager::AddSymbol(CppTrader::Matching::Symbol const&)
+ [224] _GLOBAL__sub_I__ZN8optparse15OptionContainer10add_optionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (OptionParser.cpp) [214] optparse::OptionParser::get_parser() [37] CppTrader::Matching::MarketManager::~MarketManager()
+ [225] _GLOBAL__sub_I__ZN9CppCommon4File18DEFAULT_ATTRIBUTESE (file.cpp) [233] optparse::OptionParser::parse_args(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [11] CppTrader::Matching::OrderBook::DeleteLevel(CppTrader::Matching::OrderNode*)
+ [226] _GLOBAL__sub_I__ZN9CppCommon5fatalERKNS_14SourceLocationERKNS_10StackTraceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi (fatal.cpp) [234] optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [8] CppTrader::Matching::OrderBook::DeleteOrder(CppTrader::Matching::OrderNode*)
+ [227] _GLOBAL__sub_I__ZN9CppTrader4ITCH11ITCHHandler7ProcessEPvm (itch_handler.cpp) [235] optparse::OptionContainer::add_option(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21] CppTrader::Matching::OrderBook::ReduceOrder(CppTrader::Matching::OrderNode*, unsigned long, unsigned long, unsigned long)
+ [228] _GLOBAL__sub_I__ZN9CppTrader8Matching13MarketManager8_defaultE (market_manager.cpp) [215] optparse::OptionContainer::add_option(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [56] CppTrader::Matching::OrderBook::AddTrailingStopOrder(CppTrader::Matching::OrderNode*)
+ [229] _GLOBAL__sub_I__ZN9CppTrader8Matching9OrderBookC2ERNS0_13MarketManagerERKNS0_6SymbolE (order_book.cpp) [220] optparse::Option::action(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [35] CppTrader::Matching::OrderBook::DeleteTrailingStopOrder(CppTrader::Matching::OrderNode*)
+ [230] _GLOBAL__sub_I__ZNK9CppTrader8Matching5Order8ValidateEv (order.cpp) [216] optparse::str_replace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (OptionParser.cpp) [17] CppTrader::Matching::OrderBook::AddLevel(CppTrader::Matching::OrderNode*)
+ [231] _GLOBAL__sub_I_main (matching_engine.cpp) [13] CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::erase(CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&) [6] CppTrader::Matching::OrderBook::AddOrder(CppTrader::Matching::OrderNode*)
+ [187] MyITCHHandler::onMessage(CppTrader::ITCH::NOIIMessage const&) [3] CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >::insert(CppCommon::BinTreeConstIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode> const&, CppTrader::Matching::LevelNode&) [196] CppTrader::Matching::OrderBook::OrderBook(CppTrader::Matching::MarketManager&, CppTrader::Matching::Symbol const&)
+ [188] MyITCHHandler::onMessage(CppTrader::ITCH::TradeMessage const&) [61] CppCommon::BinTreeIterator<CppCommon::BinTreeAVL<CppTrader::Matching::LevelNode, std::less<CppTrader::Matching::LevelNode> >, CppTrader::Matching::LevelNode>::operator++() [46] CppTrader::Matching::OrderBook::~OrderBook()
+ [192] MyITCHHandler::onMessage(CppTrader::ITCH::RegSHOMessage const&) [40] CppCommon::HashMapIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >*) [19] CppTrader::Matching::MarketManager::UpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::LevelUpdate const&) const
+  [22] MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMessage const&) [31] CppCommon::HashMapConstIterator<CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >, unsigned long, CppTrader::Matching::OrderNode*>::HashMapConstIterator(CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > const*) [26] CppTrader::Matching::Order::Validate() const
+ [191] MyITCHHandler::onMessage(CppTrader::ITCH::CrossTradeMessage const&) [47] CppCommon::Reader::ReadAllLines[abi:cxx11]() [217] std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::_M_resize_pos(unsigned long&) const
+ [213] MyITCHHandler::onMessage(CppTrader::ITCH::IPOQuotingMessage const&) [29] CppCommon::HashMap<unsigned long, CppTrader::Matching::OrderNode*, CppTrader::Matching::FastHash, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::rehash(unsigned long) [210] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+ [232] MyITCHHandler::onMessage(CppTrader::ITCH::MWCBDeclineMessage const&) [39] CppCommon::StdInput::Impl::Read(void*, unsigned long) [197] std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::Symbol**, std::vector<CppTrader::Matching::Symbol*, std::allocator<CppTrader::Matching::Symbol*> > >, unsigned long, CppTrader::Matching::Symbol* const&)
+  [20] MyITCHHandler::onMessage(CppTrader::ITCH::OrderCancelMessage const&) [48] CppCommon::StdInput::Read(void*, unsigned long) [198] std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> >::_M_fill_insert(__gnu_cxx::__normal_iterator<CppTrader::Matching::OrderBook**, std::vector<CppTrader::Matching::OrderBook*, std::allocator<CppTrader::Matching::OrderBook*> > >, unsigned long, CppTrader::Matching::OrderBook* const&)
+   [4] MyITCHHandler::onMessage(CppTrader::ITCH::OrderDeleteMessage const&) [49] CppCommon::StdInput::StdInput() [44] std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > >::_M_fill_insert(__gnu_cxx::__normal_iterator<std::pair<unsigned long, CppTrader::Matching::OrderNode*>*, std::vector<std::pair<unsigned long, CppTrader::Matching::OrderNode*>, std::allocator<std::pair<unsigned long, CppTrader::Matching::OrderNode*> > > >, unsigned long, std::pair<unsigned long, CppTrader::Matching::OrderNode*> const&)
+ [204] MyITCHHandler::onMessage(CppTrader::ITCH::SystemEventMessage const&) [53] CppTrader::ITCH::ITCHHandler::ProcessUnknownMessage(void*, unsigned long) [45] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char*, std::forward_iterator_tag)
+  [42] MyITCHHandler::onMessage(CppTrader::ITCH::AddOrderMPIDMessage const&) [1] CppTrader::ITCH::ITCHHandler::Process(void*, unsigned long) [205] std::__cxx11::_List_base<optparse::Option, std::allocator<optparse::Option> >::_M_clear()
+  [30] MyITCHHandler::onMessage(CppTrader::ITCH::OrderReplaceMessage const&) [12] CppTrader::Matching::MarketManager::MatchOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::Order*) [203] std::__cxx11::_List_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()
+  [60] MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedMessage const&) [43] CppTrader::Matching::MarketManager::DeleteOrder(unsigned long) [201] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  [50] MyITCHHandler::onMessage(CppTrader::ITCH::StockDirectoryMessage const&) [5] CppTrader::Matching::MarketManager::DeleteOrder(unsigned long, bool) [199] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+ [200] MyITCHHandler::onMessage(CppTrader::ITCH::LULDAuctionCollarMessage const&) [34] CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long) [218] std::__cxx11::list<optparse::Option, std::allocator<optparse::Option> >::resize(unsigned long, optparse::Option const&)
+ [193] MyITCHHandler::onMessage(CppTrader::ITCH::StockTradingActionMessage const&) [15] CppTrader::Matching::MarketManager::ReduceOrder(unsigned long, unsigned long, bool) [236] void std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_assign_dispatch<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__false_type)
+ [190] MyITCHHandler::onMessage(CppTrader::ITCH::OrderExecutedWithPriceMessage const&) [52] CppTrader::Matching::MarketManager::AddOrderBook(CppTrader::Matching::Symbol const&) [206] std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&)
+ [189] MyITCHHandler::onMessage(CppTrader::ITCH::MarketParticipantPositionMessage const&) [36] CppTrader::Matching::MarketManager::AddStopOrder(CppTrader::Matching::Order const&, bool) [207] std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [57] MyITCHHandler::~MyITCHHandler() [59] CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long) [202] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*)
+  [38] MyMarketHandler::onAddLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [9] CppTrader::Matching::MarketManager::ReplaceOrder(unsigned long, unsigned long, unsigned long, unsigned long, bool) [219] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >*)
+  [28] MyMarketHandler::onAddOrder(CppTrader::Matching::Order const&) [7] CppTrader::Matching::MarketManager::AddLimitOrder(CppTrader::Matching::Order const&, bool) [208] std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&)
+ [194] MyMarketHandler::onAddSymbol(CppTrader::Matching::Symbol const&) [27] CppTrader::Matching::MarketManager::DeleteOrderBook(unsigned int) [221] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [41] MyMarketHandler::onDeleteLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [33] CppTrader::Matching::MarketManager::AddStopLimitOrder(CppTrader::Matching::Order const&, bool) [209] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [32] MyMarketHandler::onDeleteOrder(CppTrader::Matching::Order const&) [14] CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*) [211] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, optparse::Option const*> >*)
+  [25] MyMarketHandler::onUpdateLevel(CppTrader::Matching::OrderBook const&, CppTrader::Matching::Level const&, bool) [18] CppTrader::Matching::MarketManager::ActivateStopOrders(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*, unsigned long) [212] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)
+  [55] MyMarketHandler::onUpdateOrder(CppTrader::Matching::Order const&) [62] CppTrader::Matching::MarketManager::ActivateStopLimitOrder(CppTrader::Matching::OrderBook*, CppTrader::Matching::OrderNode*) [2] <cycle 1>
+  [51] MyMarketHandler::onAddOrderBook(CppTrader::Matching::OrderBook const&) [16] CppTrader::Matching::MarketManager::RecalculateTrailingStopPrice(CppTrader::Matching::OrderBook*, CppTrader::Matching::LevelNode*)
+  [54] MyMarketHandler::onExecuteOrder(CppTrader::Matching::Order const&, unsigned long, unsigned long) [10] CppTrader::Matching::MarketManager::Match(CppTrader::Matching::OrderBook*, bool)

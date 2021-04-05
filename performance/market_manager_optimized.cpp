@@ -379,7 +379,7 @@ public:
     {
         _symbols.resize(10000);
         _order_books.resize(10000);
-        _orders.resize(300000000);
+        _orders.resize(310000000);  //changed it from 300000000 to 310000000 and works fine(no core dumped, no killed, uses around 10.5 ram)
     }
     MarketManagerOptimized(const MarketManagerOptimized&) = delete;
     MarketManagerOptimized(MarketManagerOptimized&&) = delete;

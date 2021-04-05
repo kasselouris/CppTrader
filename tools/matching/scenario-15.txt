@@ -1,0 +1,18 @@
+#check matching with more than one symbol(security)/(order)book
+enable matching
+add symbol 0 EURUSD
+add book 0
+add symbol 1 TESLA
+add book 1
+
+#EURUSD(id = 0)
+add limit buy 2 0 10 10
+
+#TESLA(id = 1)
+add limit sell 3 1 10 10
+
+#EURUSD(id = 0)
+add market sell 4 0 10
+
+#TESLA(id = 1)
+add limit buy 5 1 10 10

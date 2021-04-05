@@ -1,0 +1,12 @@
+ITCH processing...Done!
+
+Errors: 0
+
+Processing time: 29.366 s
+Total ITCH messages: 268744780
+ITCH message latency: 109 ns
+ITCH message throughput: 9151309 msg/s
+
+real    0m29,375s
+user    0m7,323s
+sys     0m11,359s
