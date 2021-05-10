@@ -1,0 +1,8623 @@
+events: Hits
+
+fl=(1) /home/apostolis/Desktop/CppTrader/include/trader/matching/fast_hash.inl
+fn=(1) CppTrader::Matching::FastHash::operator[inline]
+14 17
+
+fl=(1)
+fn=(1)
+15 15
+
+fl=(1)
+fn=(1)
+16 19
+
+fl=(1)
+fn=(1)
+17 31
+
+fl=(1)
+fn=(1)
+18 14
+
+fl=(2) /home/apostolis/Desktop/CppTrader/include/trader/matching/level.inl
+fn=(2) CppTrader::Matching::Level::Level[inline]
+36 7
+
+fl=(2)
+fn=(3) CppTrader::Matching::LevelNode::LevelNode[inline]
+cfl=(2)
+cfn=(2)
+calls=7 36
+54 7
+
+fl=(2)
+fn=(3)
+cfl=(3) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/bintree_avl.h
+cfn=(4) CppCommon::BinTreeAVL::Node::Node[inline]
+calls=2 124
+54 2
+
+fl=(2)
+fn=(3)
+cfl=(4) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/list.h
+cfn=(5) CppCommon::List::List[inline]
+calls=4 180
+54 4
+
+fl=(2)
+fn=(6) CppTrader::Matching::LevelUpdate::LevelUpdate[inline]
+72 313
+
+fl=(5) /home/apostolis/Desktop/CppTrader/include/trader/matching/market_manager.inl
+fn=(7) CppTrader::Matching::MarketManager::GetOrderBook[inline]
+cfl=(6) /usr/include/c++/9/bits/stl_vector.h
+cfn=(8) std::vector::size[inline]
+calls=2982 916
+41 2982
+
+fl=(5)
+fn=(7)
+41 494
+
+fl=(7) /home/apostolis/Desktop/CppTrader/include/trader/matching/order.h
+fn=(9) CppTrader::Matching::Order::HiddenQuantity[inline]
+164 60
+
+fl=(7)
+fn=(10) CppTrader::Matching::OrderBook::AddOrder
+231 13
+
+fl=(8) /home/apostolis/Desktop/CppTrader/include/trader/matching/order.inl
+fn=(11) CppTrader::Matching::Order::Order[inline]
+98 56
+
+fl=(8)
+fn=(12) CppTrader::Matching::Order::Limit[inline]
+cfl=(8)
+cfn=(11)
+calls=56 98
+145 56
+
+fl=(8)
+fn=(13) CppTrader::Matching::OrderNode::OrderNode[inline]
+cfl=(4)
+cfn=(14) CppCommon::List::Node::Node[inline]
+calls=4 177
+218 4
+
+fl=(8)
+fn=(13)
+218 34
+
+fl=(9) /home/apostolis/Desktop/CppTrader/include/trader/matching/order_book.inl
+fn=(15) CppTrader::Matching::OrderBook::GetBid[inline]
+cfl=(10) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/bintree_avl.inl
+cfn=(16) CppCommon::BinTreeAVL::find[inline]
+calls=5430 145
+28 5430
+
+fl=(9)
+fn=(17) CppTrader::Matching::OrderBook::GetAsk[inline]
+cfl=(10)
+cfn=(16)
+calls=5255 145
+34 5255
+
+fl=(9)
+fn=(18) CppTrader::Matching::OrderBook::GetMarketPriceBid[inline]
+113 22
+
+fl=(9)
+fn=(18)
+cfl=(11) /usr/include/c++/9/bits/stl_algobase.h
+cfn=(19) std::max[inline]
+calls=12 222
+114 12
+
+fl=(9)
+fn=(20) CppTrader::Matching::OrderBook::GetMarketPriceAsk[inline]
+120 45
+
+fl=(9)
+fn=(20)
+cfl=(11)
+cfn=(21) std::min[inline]
+calls=45 198
+121 45
+
+fl=(9)
+fn=(22) CppTrader::Matching::OrderBook::GetMarketTrailingStopPriceBid[inline]
+128 14
+
+fl=(9)
+fn=(23) CppTrader::Matching::OrderBook::GetMarketTrailingStopPriceAsk[inline]
+134 1
+
+fl=(9)
+fn=(23)
+135 30
+
+fl=(9)
+fn=(24) CppTrader::Matching::OrderBook::UpdateLastPrice[inline]
+140 3
+
+fl=(9)
+fn=(24)
+141 2
+
+fl=(9)
+fn=(24)
+143 1
+
+fl=(9)
+fn=(25) CppTrader::Matching::OrderBook::UpdateMatchingPrice[inline]
+149 2
+
+fl=(9)
+fn=(26) CppTrader::Matching::OrderBook::ResetMatchingPrice[inline]
+156 27
+
+fl=(9)
+fn=(26)
+157 15
+
+fl=(12) /home/apostolis/Desktop/CppTrader/include/trader/providers/nasdaq/itch_handler.inl
+fn=(27) CppTrader::ITCH::ITCHHandler::ReadString[inline]
+cfl=(13) /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+cfn=(28) CppTrader::ITCH::ITCHHandler::ProcessTradeMessage [clone .part.0][inline]
+calls=1 34
+341 1
+
+fl=(12)
+fn=(27)
+cfl=(13)
+cfn=(29) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMessage [clone .part.0][inline]
+calls=1 34
+341 1
+
+fl=(12)
+fn=(27)
+cfl=(13)
+cfn=(30) memcpy[inline]
+calls=6 34
+341 6
+
+fl=(12)
+fn=(31) CppTrader::ITCH::ITCHHandler::ReadTimestamp[inline]
+361 22
+
+fl=(12)
+fn=(31)
+363 10
+
+fl=(12)
+fn=(31)
+364 1
+
+fl=(12)
+fn=(31)
+365 23
+
+fl=(14) /home/apostolis/Desktop/CppTrader/modules/CppBenchmark/source/benchmark/reporter_console.cpp
+fn=(32) CppBenchmark::ReporterConsole::GenerateTimePeriod[abi:cxx11]
+219 1
+
+fl=(15) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/bintree.h
+fn=(33) CppCommon::BinTreeIterator::BinTreeIterator[inline]
+294 6
+
+fl=(15)
+fn=(34) CppCommon::BinTreeConstIterator::BinTreeConstIterator[inline]
+348 1
+
+fl=(16) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/bintree.inl
+fn=(35) CppCommon::BinTreeIterator::operator++
+428 1
+
+fl=(16)
+fn=(35)
+439 1
+
+fl=(3)
+fn=(4)
+124 2
+
+fl=(10)
+fn=(36) CppCommon::BinTreeAVL::lowest[inline]
+cfl=(10)
+cfn=(37) CppCommon::BinTreeAVL::InternalLowest[inline]
+calls=1 37
+23 1
+
+fl=(10)
+fn=(37)
+37 1
+
+fl=(10)
+fn=(38) CppCommon::BinTreeAVL::begin[inline]
+cfl=(10)
+cfn=(36)
+calls=1 23
+67 1
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39) CppCommon::BinTreeAVL::InternalFind[inline]
+calls=382 154
+145 382
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39)
+calls=88 157
+145 88
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39)
+calls=75 166
+145 75
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39)
+calls=4324 159
+145 4324
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39)
+calls=5541 164
+145 5541
+
+fl=(10)
+fn=(16)
+145 5
+
+fl=(10)
+fn=(16)
+cfl=(10)
+cfn=(39)
+calls=270 160
+145 270
+
+fl=(10)
+fn=(39)
+154 382
+
+fl=(10)
+fn=(39)
+157 88
+
+fl=(10)
+fn=(39)
+159 4324
+
+fl=(10)
+fn=(39)
+160 270
+
+fl=(10)
+fn=(39)
+164 5541
+
+fl=(10)
+fn=(39)
+166 75
+
+fl=(10)
+fn=(40) CppCommon::BinTreeAVL::insert[inline]
+cfl=(10)
+cfn=(41) CppCommon::BinTreeAVL::insert
+calls=22 328
+262 22
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=8 351
+262 8
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=29 322
+262 29
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=61 276
+262 61
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=56 266
+262 56
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=2 310
+262 2
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=4 324
+262 4
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=2 318
+262 2
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=2 348
+262 2
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=1 274
+262 1
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=12 371
+262 12
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=20 336
+262 20
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=5 341
+262 5
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=8 284
+262 8
+
+fl=(10)
+fn=(40)
+cfl=(15)
+cfn=(34)
+calls=1 348
+262 1
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=4 339
+262 4
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=40 290
+262 40
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=16 353
+262 16
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=21 292
+262 21
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=8 326
+262 8
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=5 332
+262 5
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=7 330
+262 7
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=2 338
+262 2
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=12 359
+262 12
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=8 285
+262 8
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=15 300
+262 15
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=3 271
+262 3
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=5 311
+262 5
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=3 356
+262 3
+
+fl=(10)
+fn=(40)
+262 5
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=1 358
+262 1
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=7 319
+262 7
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=1 312
+262 1
+
+fl=(10)
+fn=(40)
+cfl=(10)
+cfn=(41)
+calls=20 361
+262 20
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(40)
+calls=6 367
+266 6
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(40)
+calls=19 370
+266 19
+
+fl=(10)
+fn=(41)
+266 31
+
+fl=(10)
+fn=(41)
+271 3
+
+fl=(10)
+fn=(41)
+274 1
+
+fl=(10)
+fn=(41)
+276 61
+
+fl=(10)
+fn=(41)
+284 8
+
+fl=(10)
+fn=(41)
+285 8
+
+fl=(10)
+fn=(41)
+290 40
+
+fl=(10)
+fn=(41)
+292 21
+
+fl=(10)
+fn=(41)
+300 15
+
+fl=(10)
+fn=(41)
+310 2
+
+fl=(10)
+fn=(41)
+311 5
+
+fl=(10)
+fn=(41)
+312 1
+
+fl=(10)
+fn=(41)
+318 2
+
+fl=(10)
+fn=(41)
+319 7
+
+fl=(10)
+fn=(41)
+322 29
+
+fl=(10)
+fn=(41)
+324 4
+
+fl=(10)
+fn=(41)
+326 8
+
+fl=(10)
+fn=(41)
+328 22
+
+fl=(10)
+fn=(41)
+330 7
+
+fl=(10)
+fn=(41)
+332 5
+
+fl=(10)
+fn=(41)
+336 20
+
+fl=(10)
+fn=(41)
+338 2
+
+fl=(10)
+fn=(41)
+339 4
+
+fl=(10)
+fn=(41)
+341 5
+
+fl=(10)
+fn=(41)
+348 2
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42) CppCommon::BinTreeAVL::RotateLeftLeft[inline]
+calls=1 570
+351 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42)
+calls=1 565
+351 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42)
+calls=1 571
+351 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42)
+calls=1 578
+351 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42)
+calls=3 556
+351 3
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(42)
+calls=1 581
+351 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(43) CppCommon::BinTreeAVL::RotateRight[inline]
+calls=1 535
+353 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(43)
+calls=3 528
+353 3
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(43)
+calls=1 534
+353 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(43)
+calls=11 541
+353 11
+
+fl=(10)
+fn=(41)
+356 3
+
+fl=(10)
+fn=(41)
+358 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44) CppCommon::BinTreeAVL::RotateRightRight[inline]
+calls=2 602
+359 2
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=1 618
+359 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=1 642
+359 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=3 624
+359 3
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=1 634
+359 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=1 615
+359 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=2 635
+359 2
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(44)
+calls=1 627
+359 1
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(45) CppCommon::BinTreeAVL::RotateLeft[inline]
+calls=15 505
+361 15
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(45)
+calls=3 492
+361 3
+
+fl=(10)
+fn=(41)
+cfl=(10)
+cfn=(45)
+calls=2 512
+361 2
+
+fl=(10)
+fn=(40)
+367 6
+
+fl=(10)
+fn=(40)
+cfl=(17) /usr/include/c++/9/bits/stl_pair.h
+cfn=(46) std::make_pair[inline]
+calls=19 529
+370 19
+
+fl=(10)
+fn=(41)
+371 12
+
+fl=(10)
+fn=(47) CppCommon::BinTreeAVL::erase
+380 20
+
+fl=(10)
+fn=(47)
+390 4
+
+fl=(10)
+fn=(47)
+395 1
+
+fl=(10)
+fn=(47)
+401 9
+
+fl=(10)
+fn=(47)
+403 45
+
+fl=(10)
+fn=(47)
+404 278
+
+fl=(10)
+fn=(47)
+406 270
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48) CppCommon::BinTreeAVL::Swap[inline]
+calls=2 768
+417 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=47 754
+417 47
+
+fl=(10)
+fn=(47)
+423 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 787
+428 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 774
+428 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 754
+428 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 784
+428 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=9 755
+428 9
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=5 785
+428 5
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 760
+428 1
+
+fl=(10)
+fn=(47)
+437 189
+
+fl=(10)
+fn=(47)
+439 6
+
+fl=(10)
+fn=(47)
+441 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=4 774
+443 4
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=2 766
+443 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=11 784
+443 11
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 776
+443 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=14 768
+443 14
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 761
+443 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=39 755
+443 39
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 763
+443 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=2 786
+443 2
+
+fl=(10)
+fn=(47)
+445 9
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 778
+449 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 784
+449 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(48)
+calls=1 785
+449 1
+
+fl=(10)
+fn=(47)
+456 1
+
+fl=(10)
+fn=(47)
+458 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49) CppCommon::BinTreeAVL::Unlink[inline]
+calls=1 657
+465 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=8 663
+465 8
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=5 709
+465 5
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=1 717
+465 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=716 691
+465 716
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=6 720
+465 6
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=46 713
+465 46
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=25 696
+465 25
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=2 722
+465 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=3 711
+465 3
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=2 654
+465 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=2 728
+465 2
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=7 733
+465 7
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=13 672
+465 13
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=1 636
+465 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=20 730
+465 20
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=5 703
+465 5
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=5 698
+465 5
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=1 652
+465 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=3 664
+465 3
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=1 735
+465 1
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=12 682
+465 12
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=4 688
+465 4
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=28 649
+465 28
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=18 719
+465 18
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=9 731
+465 9
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=8 544
+465 8
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=10 670
+465 10
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=15 669
+465 15
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=10 680
+465 10
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=3 693
+465 3
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=10 661
+465 10
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=22 679
+465 22
+
+fl=(10)
+fn=(47)
+cfl=(10)
+cfn=(49)
+calls=3 699
+465 3
+
+fl=(10)
+fn=(47)
+468 12
+
+fl=(10)
+fn=(47)
+470 402
+
+fl=(10)
+fn=(47)
+474 3
+
+fl=(10)
+fn=(47)
+475 1
+
+fl=(10)
+fn=(47)
+477 6
+
+fl=(10)
+fn=(47)
+479 1
+
+fl=(10)
+fn=(45)
+489 1
+
+fl=(10)
+fn=(45)
+492 4
+
+fl=(10)
+fn=(45)
+494 2
+
+fl=(10)
+fn=(45)
+505 29
+
+fl=(10)
+fn=(45)
+512 3
+
+fl=(10)
+fn=(43)
+528 4
+
+fl=(10)
+fn=(43)
+530 2
+
+fl=(10)
+fn=(43)
+534 1
+
+fl=(10)
+fn=(43)
+535 1
+
+fl=(10)
+fn=(43)
+541 23
+
+fl=(10)
+fn=(49)
+544 8
+
+fl=(10)
+fn=(42)
+556 4
+
+fl=(10)
+fn=(42)
+565 1
+
+fl=(10)
+fn=(42)
+567 3
+
+fl=(10)
+fn=(42)
+569 10
+
+fl=(10)
+fn=(42)
+570 1
+
+fl=(10)
+fn=(42)
+571 1
+
+fl=(10)
+fn=(42)
+578 3
+
+fl=(10)
+fn=(42)
+581 1
+
+fl=(10)
+fn=(44)
+602 3
+
+fl=(10)
+fn=(44)
+611 1
+
+fl=(10)
+fn=(44)
+613 2
+
+fl=(10)
+fn=(44)
+615 11
+
+fl=(10)
+fn=(44)
+618 1
+
+fl=(10)
+fn=(44)
+624 7
+
+fl=(10)
+fn=(44)
+627 2
+
+fl=(10)
+fn=(44)
+634 1
+
+fl=(10)
+fn=(44)
+635 2
+
+fl=(10)
+fn=(49)
+636 1
+
+fl=(10)
+fn=(44)
+642 1
+
+fl=(10)
+fn=(49)
+649 28
+
+fl=(10)
+fn=(49)
+652 1
+
+fl=(10)
+fn=(49)
+654 2
+
+fl=(10)
+fn=(49)
+657 1
+
+fl=(10)
+fn=(49)
+661 10
+
+fl=(10)
+fn=(49)
+663 8
+
+fl=(10)
+fn=(49)
+664 3
+
+fl=(10)
+fn=(49)
+669 15
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(42)
+calls=3 567
+670 3
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(42)
+calls=7 569
+670 7
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(43)
+calls=1 528
+672 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(43)
+calls=1 530
+672 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(43)
+calls=11 541
+672 11
+
+fl=(10)
+fn=(49)
+679 22
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=1 602
+680 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=1 611
+680 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=1 613
+680 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=7 615
+680 7
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=1 489
+682 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=1 494
+682 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=1 512
+682 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=9 505
+682 9
+
+fl=(10)
+fn=(49)
+688 4
+
+fl=(10)
+fn=(49)
+691 716
+
+fl=(10)
+fn=(49)
+693 3
+
+fl=(10)
+fn=(49)
+696 25
+
+fl=(10)
+fn=(49)
+698 5
+
+fl=(10)
+fn=(49)
+699 3
+
+fl=(10)
+fn=(49)
+703 5
+
+fl=(10)
+fn=(49)
+709 5
+
+fl=(10)
+fn=(49)
+711 3
+
+fl=(10)
+fn=(49)
+713 46
+
+fl=(10)
+fn=(49)
+717 1
+
+fl=(10)
+fn=(49)
+719 18
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(42)
+calls=1 556
+720 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(42)
+calls=3 569
+720 3
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(42)
+calls=2 578
+720 2
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(43)
+calls=1 530
+722 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(43)
+calls=1 541
+722 1
+
+fl=(10)
+fn=(49)
+728 2
+
+fl=(10)
+fn=(49)
+730 20
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=4 624
+731 4
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=1 627
+731 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=1 613
+731 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(44)
+calls=3 615
+731 3
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=1 492
+733 1
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=5 505
+733 5
+
+fl=(10)
+fn=(49)
+cfl=(10)
+cfn=(45)
+calls=1 494
+733 1
+
+fl=(10)
+fn=(49)
+735 1
+
+fl=(10)
+fn=(48)
+754 48
+
+fl=(10)
+fn=(48)
+755 48
+
+fl=(10)
+fn=(48)
+760 1
+
+fl=(10)
+fn=(48)
+761 1
+
+fl=(10)
+fn=(48)
+763 1
+
+fl=(10)
+fn=(48)
+766 2
+
+fl=(10)
+fn=(48)
+768 16
+
+fl=(10)
+fn=(48)
+774 5
+
+fl=(10)
+fn=(48)
+776 1
+
+fl=(10)
+fn=(48)
+778 1
+
+fl=(10)
+fn=(48)
+cfl=(18) /usr/include/c++/9/bits/move.h
+cfn=(50) std::swap[inline]
+calls=10 193
+784 10
+
+fl=(10)
+fn=(48)
+cfl=(18)
+cfn=(50)
+calls=3 194
+784 3
+
+fl=(10)
+fn=(48)
+cfl=(18)
+cfn=(50)
+calls=6 194
+785 6
+
+fl=(10)
+fn=(48)
+cfl=(18)
+cfn=(50)
+calls=1 195
+786 1
+
+fl=(10)
+fn=(48)
+cfl=(18)
+cfn=(50)
+calls=1 194
+786 1
+
+fl=(10)
+fn=(48)
+cfl=(18)
+cfn=(50)
+calls=1 194
+787 1
+
+fl=(19) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/hashmap.h
+fn=(51) CppCommon::HashMap::~HashMap[inline]
+cfl=(6)
+cfn=(52) std::vector::~vector[inline]
+calls=1 680
+80 1
+
+fl=(19)
+fn=(53) CppCommon::operator==[inline]
+249 4
+
+fl=(19)
+fn=(54) CppCommon::operator!=[inline]
+308 1
+
+fl=(20) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/hashmap.inl
+fn=(55) CppCommon::HashMap::HashMap[inline]
+cfl=(6)
+cfn=(56) std::vector::resize[inline]
+calls=18 957
+18 18
+
+fl=(20)
+fn=(55)
+cfl=(20)
+cfn=(55)
+calls=18 18
+40 18
+
+fl=(20)
+fn=(55)
+cfl=(19)
+cfn=(54)
+calls=1 308
+42 1
+
+fl=(20)
+fn=(55)
+cfl=(20)
+cfn=(57) CppCommon::HashMapConstIterator::operator++[inline]
+calls=1 449
+42 1
+
+fl=(20)
+fn=(55)
+cfl=(20)
+cfn=(58) CppCommon::HashMap::insert[inline]
+calls=5 191
+43 5
+
+fl=(20)
+fn=(59) CppCommon::HashMap::end[inline]
+cfl=(20)
+cfn=(60) CppCommon::HashMapIterator::HashMapIterator
+calls=56 331
+77 56
+
+fl=(20)
+fn=(59)
+77 96
+
+fl=(20)
+fn=(59)
+cfl=(20)
+cfn=(60)
+calls=2 333
+77 2
+
+fl=(20)
+fn=(59)
+cfl=(20)
+cfn=(60)
+calls=1 356
+77 1
+
+fl=(20)
+fn=(61) CppCommon::HashMap::find[inline]
+cfl=(20)
+cfn=(62) CppCommon::HashMap::next_index[inline]
+calls=34 280
+133 34
+
+fl=(20)
+fn=(61)
+cfl=(20)
+cfn=(63) CppCommon::HashMap::key_to_index[inline]
+calls=14 272
+133 14
+
+fl=(20)
+fn=(61)
+cfl=(20)
+cfn=(63)
+calls=28 273
+133 28
+
+fl=(20)
+fn=(61)
+135 3657
+
+fl=(20)
+fn=(61)
+136 1
+
+fl=(20)
+fn=(61)
+137 105
+
+fl=(20)
+fn=(61)
+cfl=(20)
+cfn=(59)
+calls=7 77
+138 7
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64) CppCommon::HashMap::emplace_internal[inline]
+calls=5 234
+191 5
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=118 232
+197 118
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=39 238
+197 39
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=21 230
+197 21
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=41 236
+197 41
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=58 239
+197 58
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=18 240
+197 18
+
+fl=(20)
+fn=(58)
+cfl=(20)
+cfn=(64)
+calls=3343 234
+197 3343
+
+fl=(20)
+fn=(65) CppCommon::HashMap::erase[inline]
+cfl=(20)
+cfn=(66) CppCommon::HashMap::erase_internal[inline]
+calls=45 260
+221 45
+
+fl=(20)
+fn=(65)
+cfl=(20)
+cfn=(66)
+calls=80 252
+221 80
+
+fl=(20)
+fn=(65)
+cfl=(20)
+cfn=(66)
+calls=6 254
+221 6
+
+fl=(20)
+fn=(65)
+cfl=(20)
+cfn=(66)
+calls=12 250
+221 12
+
+fl=(20)
+fn=(65)
+cfl=(20)
+cfn=(66)
+calls=9 255
+221 9
+
+fl=(20)
+fn=(65)
+cfl=(20)
+cfn=(66)
+calls=15 261
+221 15
+
+fl=(20)
+fn=(64)
+cfl=(20)
+cfn=(67) CppCommon::HashMap::reserve[inline]
+calls=14 301
+230 14
+
+fl=(20)
+fn=(64)
+cfl=(20)
+cfn=(67)
+calls=7 302
+230 7
+
+fl=(20)
+fn=(64)
+cfl=(20)
+cfn=(63)
+calls=34 273
+232 34
+
+fl=(20)
+fn=(64)
+cfl=(20)
+cfn=(63)
+calls=2 272
+232 2
+
+fl=(20)
+fn=(64)
+cfl=(20)
+cfn=(62)
+calls=82 280
+232 82
+
+fl=(20)
+fn=(64)
+234 3336
+
+fl=(20)
+fn=(64)
+cfl=(6)
+cfn=(68) std::vector::operator[][inline]
+calls=12 1043
+234 12
+
+fl=(20)
+fn=(64)
+236 41
+
+fl=(20)
+fn=(64)
+238 39
+
+fl=(20)
+fn=(64)
+239 58
+
+fl=(20)
+fn=(64)
+240 18
+
+fl=(20)
+fn=(66)
+cfl=(20)
+cfn=(62)
+calls=6 279
+250 6
+
+fl=(20)
+fn=(66)
+cfl=(20)
+cfn=(62)
+calls=6 280
+250 6
+
+fl=(20)
+fn=(66)
+cfl=(6)
+cfn=(68)
+calls=9 1043
+252 9
+
+fl=(20)
+fn=(66)
+252 71
+
+fl=(20)
+fn=(66)
+254 6
+
+fl=(20)
+fn=(66)
+255 9
+
+fl=(20)
+fn=(66)
+cfl=(20)
+cfn=(63)
+calls=45 273
+260 45
+
+fl=(20)
+fn=(66)
+cfl=(20)
+cfn=(69) CppCommon::HashMap::diff[inline]
+calls=4 284
+261 4
+
+fl=(20)
+fn=(66)
+cfl=(20)
+cfn=(69)
+calls=11 287
+261 11
+
+fl=(20)
+fn=(63)
+cfl=(6)
+cfn=(8)
+calls=9 916
+272 9
+
+fl=(20)
+fn=(63)
+272 7
+
+fl=(20)
+fn=(63)
+cfl=(1)
+cfn=(1)
+calls=14 18
+273 14
+
+fl=(20)
+fn=(63)
+cfl=(1)
+cfn=(1)
+calls=17 14
+273 17
+
+fl=(20)
+fn=(63)
+cfl=(1)
+cfn=(1)
+calls=19 16
+273 19
+
+fl=(20)
+fn=(63)
+cfl=(1)
+cfn=(1)
+calls=31 17
+273 31
+
+fl=(20)
+fn=(63)
+273 11
+
+fl=(20)
+fn=(63)
+cfl=(1)
+cfn=(1)
+calls=15 15
+273 15
+
+fl=(20)
+fn=(62)
+cfl=(6)
+cfn=(8)
+calls=6 916
+279 6
+
+fl=(20)
+fn=(62)
+280 122
+
+fl=(20)
+fn=(69)
+284 4
+
+fl=(20)
+fn=(69)
+287 11
+
+fl=(20)
+fn=(70) CppCommon::HashMap::rehash[inline]
+cfl=(20)
+cfn=(55)
+calls=18 40
+294 18
+
+fl=(20)
+fn=(70)
+cfl=(19)
+cfn=(51)
+calls=1 80
+294 1
+
+fl=(20)
+fn=(70)
+cfl=(20)
+cfn=(55)
+calls=5 43
+294 5
+
+fl=(20)
+fn=(70)
+cfl=(20)
+cfn=(55)
+calls=2 42
+294 2
+
+fl=(20)
+fn=(67)
+cfl=(6)
+cfn=(8)
+calls=6 916
+301 6
+
+fl=(20)
+fn=(67)
+301 8
+
+fl=(20)
+fn=(67)
+cfl=(20)
+cfn=(70)
+calls=10 294
+302 10
+
+fl=(20)
+fn=(71) CppCommon::HashMap::clear[inline]
+309 1
+
+fl=(20)
+fn=(60)
+331 56
+
+fl=(20)
+fn=(60)
+333 2
+
+fl=(20)
+fn=(60)
+356 1
+
+fl=(20)
+fn=(72) CppCommon::HashMapIterator::operator++[inline]
+363 1
+
+fl=(20)
+fn=(72)
+365 1
+
+fl=(20)
+fn=(73) CppCommon::HashMapIterator::operator->[inline]
+cfl=(6)
+cfn=(8)
+calls=5 916
+399 5
+
+fl=(20)
+fn=(73)
+399 13
+
+fl=(20)
+fn=(73)
+cfl=(6)
+cfn=(68)
+calls=8 1043
+399 8
+
+fl=(20)
+fn=(57)
+449 1
+
+fl=(4)
+fn=(14)
+177 4
+
+fl=(4)
+fn=(5)
+180 4
+
+fl=(21) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/containers/list.inl
+fn=(74) CppCommon::List::push_back[inline]
+107 101
+
+fl=(21)
+fn=(74)
+108 3
+
+fl=(21)
+fn=(74)
+109 5
+
+fl=(21)
+fn=(74)
+110 2
+
+fl=(21)
+fn=(74)
+111 1
+
+fl=(21)
+fn=(74)
+112 1181
+
+fl=(21)
+fn=(74)
+113 4
+
+fl=(21)
+fn=(74)
+114 275
+
+fl=(21)
+fn=(75) CppCommon::List::pop_current[inline]
+183 5
+
+fl=(21)
+fn=(75)
+184 299
+
+fl=(21)
+fn=(75)
+186 5
+
+fl=(21)
+fn=(75)
+187 1
+
+fl=(21)
+fn=(75)
+188 1
+
+fl=(21)
+fn=(75)
+190 3
+
+fl=(21)
+fn=(75)
+191 25
+
+fl=(21)
+fn=(75)
+192 3
+
+fl=(21)
+fn=(75)
+193 1
+
+fl=(22) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/memory/allocator.inl
+fn=(76) CppCommon::Allocator::Create[inline]
+cfl=(23) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/memory/allocator_pool.inl
+cfn=(77) CppCommon::PoolMemoryManager::malloc[inline]
+calls=6 48
+75 6
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=6 61
+75 6
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=19 188
+75 19
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=2 64
+75 2
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=4 62
+75 4
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=5 67
+75 5
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=4 145
+75 4
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=3 135
+75 3
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=45 172
+75 45
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=22 166
+75 22
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=7 60
+75 7
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=5 163
+75 5
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=6 91
+75 6
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=7 173
+75 7
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=7 192
+75 7
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=10 157
+75 10
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=41 123
+75 41
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=15 126
+75 15
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=155 129
+75 155
+
+fl=(22)
+fn=(76)
+cfl=(23)
+cfn=(77)
+calls=12 183
+75 12
+
+fl=(22)
+fn=(76)
+79 3
+
+fl=(22)
+fn=(76)
+cfl=(8)
+cfn=(13)
+calls=38 218
+79 38
+
+fl=(22)
+fn=(76)
+cfl=(2)
+cfn=(3)
+calls=13 54
+79 13
+
+fl=(22)
+fn=(78) CppCommon::Allocator::Release[inline]
+cfl=(22)
+cfn=(78)
+calls=276 96
+85 276
+
+fl=(22)
+fn=(78)
+cfl=(22)
+cfn=(78)
+calls=2 93
+85 2
+
+fl=(22)
+fn=(78)
+90 1
+
+fl=(22)
+fn=(78)
+cfl=(24) /home/apostolis/Desktop/CppTrader/source/trader/matching/order_book.cpp
+cfn=(79) CppTrader::Matching::OrderBook::~OrderBook
+calls=2 36
+93 2
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80) CppCommon::PoolMemoryManager::free[inline]
+calls=2 232
+96 2
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=13 207
+96 13
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=33 225
+96 33
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=3 229
+96 3
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=3 227
+96 3
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=13 221
+96 13
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=159 235
+96 159
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=8 228
+96 8
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=5 220
+96 5
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=9 251
+96 9
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=6 222
+96 6
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=1 250
+96 1
+
+fl=(22)
+fn=(78)
+96 16
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=2 241
+96 2
+
+fl=(22)
+fn=(78)
+cfl=(23)
+cfn=(80)
+calls=3 245
+96 3
+
+fl=(22)
+fn=(81) CppCommon::DefaultMemoryManager::malloc[inline]
+cfl=??
+cfn=(82) __libc_malloc
+calls=6 0
+153 6
+
+fl=(22)
+fn=(83) CppCommon::DefaultMemoryManager::free[inline]
+cfl=(22)
+cfn=(83)
+calls=2 169
+163 2
+
+fl=(22)
+fn=(83)
+cfl=??
+cfn=(84) pthread_attr_setschedparam
+calls=2 0
+169 2
+
+fl=(23)
+fn=(77)
+48 6
+
+fl=(23)
+fn=(77)
+60 7
+
+fl=(23)
+fn=(77)
+61 6
+
+fl=(23)
+fn=(77)
+62 4
+
+fl=(23)
+fn=(77)
+64 2
+
+fl=(23)
+fn=(77)
+67 5
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(85) CppCommon::PoolMemoryManager::AllocateMemoryPool[inline]
+calls=6 382
+91 6
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(86) CppCommon::PoolMemoryManager::AlignAdjustment[inline]
+calls=4 369
+123 4
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(86)
+calls=18 370
+123 18
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(86)
+calls=6 364
+123 6
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(86)
+calls=7 372
+123 7
+
+fl=(23)
+fn=(77)
+cfl=(23)
+cfn=(86)
+calls=6 367
+123 6
+
+fl=(23)
+fn=(77)
+126 15
+
+fl=(23)
+fn=(77)
+129 155
+
+fl=(23)
+fn=(77)
+135 3
+
+fl=(23)
+fn=(77)
+145 4
+
+fl=(23)
+fn=(77)
+157 10
+
+fl=(23)
+fn=(77)
+163 5
+
+fl=(23)
+fn=(77)
+166 22
+
+fl=(23)
+fn=(77)
+172 45
+
+fl=(23)
+fn=(77)
+173 7
+
+fl=(23)
+fn=(77)
+183 12
+
+fl=(23)
+fn=(77)
+188 19
+
+fl=(23)
+fn=(77)
+192 7
+
+fl=(23)
+fn=(80)
+207 13
+
+fl=(23)
+fn=(80)
+220 5
+
+fl=(23)
+fn=(80)
+221 13
+
+fl=(23)
+fn=(80)
+222 6
+
+fl=(23)
+fn=(80)
+225 33
+
+fl=(23)
+fn=(80)
+227 3
+
+fl=(23)
+fn=(80)
+228 8
+
+fl=(23)
+fn=(80)
+229 3
+
+fl=(23)
+fn=(80)
+232 2
+
+fl=(23)
+fn=(80)
+235 159
+
+fl=(23)
+fn=(80)
+241 2
+
+fl=(23)
+fn=(80)
+245 3
+
+fl=(23)
+fn=(80)
+250 1
+
+fl=(23)
+fn=(80)
+251 9
+
+fl=(23)
+fn=(86)
+cfl=(25) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/memory/memory.inl
+cfn=(87) CppCommon::Memory::Align[inline]
+calls=4 37
+358 4
+
+fl=(23)
+fn=(86)
+358 2
+
+fl=(23)
+fn=(86)
+cfl=(23)
+cfn=(86)
+calls=6 358
+364 6
+
+fl=(23)
+fn=(86)
+367 6
+
+fl=(23)
+fn=(86)
+369 4
+
+fl=(23)
+fn=(86)
+370 18
+
+fl=(23)
+fn=(86)
+372 7
+
+fl=(23)
+fn=(85)
+cfl=(22)
+cfn=(81)
+calls=6 153
+382 6
+
+fl=(23)
+fn=(88) CppCommon::PoolMemoryManager::ClearMemoryPool[inline]
+cfl=(22)
+cfn=(83)
+calls=2 163
+409 2
+
+fl=(25)
+fn=(87)
+37 4
+
+fl=(26) /home/apostolis/Desktop/CppTrader/modules/CppCommon/include/utility/endian.inl
+fn=(89) CppCommon::Endian::ReadBigEndian[inline]
+46 54
+
+fl=(26)
+fn=(90) CppTrader::ITCH::ITCHHandler::Process
+50 5
+
+fl=(26)
+fn=(89)
+84 2
+
+fl=(26)
+fn=(89)
+87 30
+
+fl=(26)
+fn=(89)
+136 10
+
+fl=(26)
+fn=(89)
+143 15
+
+fl=(27) /home/apostolis/Desktop/CppTrader/modules/CppCommon/source/system/stream.cpp
+fn=(91) CppCommon::StdInput::Impl::Read
+58 2
+
+fl=(27)
+fn=(91)
+64 1
+
+fl=(27)
+fn=(91)
+cfl=(28) /usr/include/x86_64-linux-gnu/bits/stdio2.h
+cfn=(92) fread[inline]
+calls=14 297
+67 14
+
+fl=(27)
+fn=(91)
+cfl=(28)
+cfn=(93) CppCommon::StdInput::Impl::Read[inline]
+calls=3697 297
+67 3697
+
+fl=(27)
+fn=(91)
+cfl=??
+cfn=(94) _IO_ferror
+calls=23 0
+68 23
+
+fl=(27)
+fn=(91)
+cfl=??
+cfn=(95) _init
+calls=1 0
+68 1
+
+fl=(27)
+fn=(91)
+68 1
+
+fl=(27)
+fn=(91)
+77 1
+
+fl=(27)
+fn=(96) CppCommon::StdInput::Read
+cfl=(27)
+cfn=(91)
+calls=1 77
+254 1
+
+fl=(27)
+fn=(96)
+cfl=(27)
+cfn=(91)
+calls=2 58
+254 2
+
+fl=(27)
+fn=(96)
+cfl=(27)
+cfn=(91)
+calls=3711 67
+254 3711
+
+fl=(27)
+fn=(96)
+254 16
+
+fl=(27)
+fn=(96)
+cfl=(27)
+cfn=(91)
+calls=25 68
+254 25
+
+fl=(27)
+fn=(96)
+cfl=(27)
+cfn=(91)
+calls=1 64
+254 1
+
+fl=(29) /home/apostolis/Desktop/CppTrader/performance/matching_engine.cpp
+fn=(97) MyMarketHandler::onUpdateOrderBook
+53 77
+
+fl=(29)
+fn=(98) MyMarketHandler::onAddLevel
+55 11
+
+fl=(29)
+fn=(99) MyMarketHandler::onUpdateLevel
+56 39
+
+fl=(29)
+fn=(100) MyMarketHandler::onDeleteLevel
+57 8
+
+fl=(29)
+fn=(101) MyMarketHandler::onAddOrder
+58 49
+
+fl=(29)
+fn=(102) MyMarketHandler::onDeleteOrder
+60 31
+
+fl=(29)
+fn=(103) MyMarketHandler::onExecuteOrder
+61 5
+
+fl=(29)
+fn=(104) MyITCHHandler::onMessage
+cfl=(30) /home/apostolis/Desktop/CppTrader/source/trader/matching/market_manager.cpp
+cfn=(105) CppTrader::Matching::MarketManager::AddOrder
+calls=81 138
+100 81
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(105)
+calls=10 139
+100 10
+
+fl=(29)
+fn=(104)
+100 58
+
+fl=(29)
+fn=(104)
+cfl=(8)
+cfn=(12)
+calls=55 145
+100 55
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(105)
+calls=18651 135
+100 18651
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(105)
+calls=17 158
+100 17
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(105)
+calls=39 136
+100 39
+
+fl=(29)
+fn=(104)
+101 1
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(105)
+calls=153 135
+101 153
+
+fl=(29)
+fn=(104)
+cfl=(8)
+cfn=(12)
+calls=1 145
+101 1
+
+fl=(29)
+fn=(104)
+102 1
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(106) CppTrader::Matching::MarketManager::ReduceOrder
+calls=3 453
+104 3
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(106)
+calls=235 454
+104 235
+
+fl=(29)
+fn=(104)
+104 1
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(107) CppTrader::Matching::MarketManager::DeleteOrder
+calls=25 816
+105 25
+
+fl=(29)
+fn=(104)
+105 38
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(107)
+calls=13079 817
+105 13079
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(107)
+calls=8 818
+105 8
+
+fl=(29)
+fn=(104)
+106 15
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(108) CppTrader::Matching::MarketManager::ReplaceOrder
+calls=5615 682
+106 5615
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(108)
+calls=5 683
+106 5
+
+fl=(29)
+fn=(104)
+cfl=(30)
+cfn=(108)
+calls=9 681
+106 9
+
+fl=(29)
+fn=(104)
+110 3
+
+fl=(29)
+fn=(109) main
+cfl=(30)
+cfn=(110) CppTrader::Matching::MarketManager::~MarketManager
+calls=1 21
+137 1
+
+fl=(29)
+fn=(109)
+cfl=(30)
+cfn=(110)
+calls=2 19
+137 2
+
+fl=(29)
+fn=(109)
+157 18
+
+fl=(29)
+fn=(109)
+cfl=(27)
+cfn=(96)
+calls=3756 254
+157 3756
+
+fl=(29)
+fn=(109)
+cfl=(31) /home/apostolis/Desktop/CppTrader/source/trader/providers/nasdaq/itch_handler.cpp
+cfn=(90)
+calls=21 23
+160 21
+
+fl=(29)
+fn=(109)
+cfl=(26)
+cfn=(90)
+calls=5 50
+160 5
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=20 28
+160 20
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=4 70
+160 4
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=25 49
+160 25
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=8 17
+160 8
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=1 60
+160 1
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=14 68
+160 14
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=2 100
+160 2
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=3 21
+160 3
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=19 82
+160 19
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=50 53
+160 50
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=45 39
+160 45
+
+fl=(29)
+fn=(109)
+160 2
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=4 58
+160 4
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=218 80
+160 218
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=8 87
+160 8
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=20 95
+160 20
+
+fl=(29)
+fn=(109)
+cfl=(31)
+cfn=(90)
+calls=3 30
+160 3
+
+fl=(29)
+fn=(109)
+cfl=(32) /usr/include/c++/9/ostream
+cfn=(111) std::operator<< [inline]
+calls=1 570
+163 1
+
+fl=(29)
+fn=(109)
+cfl=(14)
+cfn=(32)
+calls=1 219
+174 1
+
+fl=(30)
+fn=(110)
+cfl=(20)
+cfn=(72)
+calls=1 363
+19 1
+
+fl=(30)
+fn=(110)
+cfl=(20)
+cfn=(72)
+calls=1 365
+19 1
+
+fl=(30)
+fn=(110)
+cfl=(20)
+cfn=(71)
+calls=1 309
+21 1
+
+fl=(30)
+fn=(110)
+cfl=(22)
+cfn=(78)
+calls=2 85
+26 2
+
+fl=(30)
+fn=(105)
+cfl=(30)
+cfn=(112) CppTrader::Matching::MarketManager::AddOrder[inline]
+calls=9 143
+135 9
+
+fl=(30)
+fn=(105)
+cfl=(30)
+cfn=(112)
+calls=18796 148
+135 18796
+
+fl=(30)
+fn=(105)
+cfl=(30)
+cfn=(112)
+calls=8 154
+135 8
+
+fl=(30)
+fn=(105)
+136 39
+
+fl=(30)
+fn=(105)
+cfl=(33) /home/apostolis/Desktop/CppTrader/source/trader/matching/order.cpp
+cfn=(113) CppTrader::Matching::Order::Validate
+calls=3 19
+138 3
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=3 41
+138 3
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=5 78
+138 5
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=45 15
+138 45
+
+fl=(30)
+fn=(105)
+138 3
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=2 44
+138 2
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=4 68
+138 4
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=8 26
+138 8
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=3 30
+138 3
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=1 23
+138 1
+
+fl=(30)
+fn=(105)
+cfl=(33)
+cfn=(113)
+calls=4 18
+138 4
+
+fl=(30)
+fn=(105)
+139 10
+
+fl=(30)
+fn=(112)
+143 9
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114) CppTrader::Matching::MarketManager::AddLimitOrder
+calls=25 240
+148 25
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=35 196
+148 35
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=336 209
+148 336
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=2988 212
+148 2988
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=642 234
+148 642
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=48 199
+148 48
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=336 193
+148 336
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=2316 203
+148 2316
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=8 192
+148 8
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=6 202
+148 6
+
+fl=(30)
+fn=(112)
+148 6
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=2 239
+148 2
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=16 233
+148 16
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=19 206
+148 19
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=11925 224
+148 11925
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=6 229
+148 6
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=74 190
+148 74
+
+fl=(30)
+fn=(112)
+cfl=(30)
+cfn=(114)
+calls=10 237
+148 10
+
+fl=(30)
+fn=(112)
+154 8
+
+fl=(30)
+fn=(105)
+158 17
+
+fl=(30)
+fn=(114)
+190 74
+
+fl=(30)
+fn=(114)
+cfl=(5)
+cfn=(7)
+calls=8 41
+192 8
+
+fl=(30)
+fn=(114)
+193 336
+
+fl=(30)
+fn=(114)
+196 35
+
+fl=(30)
+fn=(114)
+cfl=(29)
+cfn=(101)
+calls=37 58
+199 37
+
+fl=(30)
+fn=(114)
+199 11
+
+fl=(30)
+fn=(114)
+202 6
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(115) CppTrader::Matching::MarketManager::MatchLimit[inline]
+calls=2316 1204
+203 2316
+
+fl=(30)
+fn=(114)
+206 19
+
+fl=(30)
+fn=(114)
+cfl=(22)
+cfn=(76)
+calls=291 75
+209 291
+
+fl=(30)
+fn=(114)
+209 7
+
+fl=(30)
+fn=(114)
+cfl=(22)
+cfn=(76)
+calls=38 79
+209 38
+
+fl=(30)
+fn=(114)
+cfl=(20)
+cfn=(58)
+calls=2993 197
+212 2993
+
+fl=(30)
+fn=(114)
+224 31
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=40 134
+224 40
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116) CppTrader::Matching::MarketManager::UpdateLevel
+calls=3 1737
+224 3
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=39 1749
+224 39
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=23 142
+224 23
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=47 143
+224 47
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=12 1740
+224 12
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=7 148
+224 7
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=33 129
+224 33
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=9466 131
+224 9466
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=16 1734
+224 16
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=33 1733
+224 33
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=1466 147
+224 1466
+
+fl=(30)
+fn=(114)
+cfl=(7)
+cfn=(10)
+calls=12 231
+224 12
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=42 1743
+224 42
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=9 155
+224 9
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=8 138
+224 8
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=81 154
+224 81
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(116)
+calls=11 1750
+224 11
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=18 144
+224 18
+
+fl=(30)
+fn=(114)
+cfl=(24)
+cfn=(10)
+calls=528 137
+224 528
+
+fl=(30)
+fn=(114)
+229 2
+
+fl=(30)
+fn=(114)
+cfl=(29)
+cfn=(102)
+calls=4 60
+229 4
+
+fl=(30)
+fn=(114)
+233 16
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117) CppTrader::Matching::MarketManager::Match
+calls=402 1164
+234 402
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117)
+calls=66 1073
+234 66
+
+fl=(30)
+fn=(114)
+234 10
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117)
+calls=16 1167
+234 16
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117)
+calls=44 1067
+234 44
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117)
+calls=96 1160
+234 96
+
+fl=(30)
+fn=(114)
+cfl=(30)
+cfn=(117)
+calls=8 1072
+234 8
+
+fl=(30)
+fn=(114)
+cfl=(9)
+cfn=(26)
+calls=10 156
+237 10
+
+fl=(30)
+fn=(114)
+239 2
+
+fl=(30)
+fn=(114)
+240 25
+
+fl=(30)
+fn=(106)
+453 3
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=75 468
+454 75
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 472
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=61 475
+454 61
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=7 482
+454 7
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 498
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 458
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=5 476
+454 5
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 486
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=2 470
+454 2
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=40 501
+454 40
+
+fl=(30)
+fn=(106)
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 555
+454 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=38 549
+454 38
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(106)
+calls=1 525
+454 1
+
+fl=(30)
+fn=(106)
+458 4
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(61)
+calls=4 137
+468 4
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(61)
+calls=8 133
+468 8
+
+fl=(30)
+fn=(106)
+468 1
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(61)
+calls=197 135
+468 197
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(59)
+calls=7 77
+470 7
+
+fl=(30)
+fn=(106)
+cfl=(19)
+cfn=(53)
+calls=1 249
+470 1
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(73)
+calls=1 399
+472 1
+
+fl=(30)
+fn=(106)
+472 1
+
+fl=(30)
+fn=(106)
+cfl=(5)
+cfn=(7)
+calls=61 41
+475 61
+
+fl=(30)
+fn=(106)
+476 8
+
+fl=(30)
+fn=(106)
+477 1
+
+fl=(30)
+fn=(106)
+482 7
+
+fl=(30)
+fn=(106)
+cfl=(7)
+cfn=(9)
+calls=2 164
+482 2
+
+fl=(30)
+fn=(106)
+486 1
+
+fl=(30)
+fn=(106)
+cfl=(7)
+cfn=(9)
+calls=1 164
+488 1
+
+fl=(30)
+fn=(106)
+495 1
+
+fl=(30)
+fn=(106)
+498 2
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118) CppTrader::Matching::OrderBook::ReduceOrder
+calls=1 168
+501 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=4 163
+501 4
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 158
+501 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 177
+501 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 160
+501 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=4 186
+501 4
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(116)
+calls=4 1749
+501 4
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(116)
+calls=1 1740
+501 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=29 164
+501 29
+
+fl=(30)
+fn=(106)
+505 1
+
+fl=(30)
+fn=(106)
+519 2
+
+fl=(30)
+fn=(106)
+cfl=(29)
+cfn=(102)
+calls=2 60
+519 2
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=2 164
+525 2
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 165
+525 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=54 170
+525 54
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=90 181
+525 90
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(116)
+calls=1 1733
+525 1
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 187
+525 1
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(116)
+calls=2 1743
+525 2
+
+fl=(30)
+fn=(106)
+cfl=(24)
+cfn=(118)
+calls=1 177
+525 1
+
+fl=(30)
+fn=(106)
+cfl=(20)
+cfn=(65)
+calls=2 221
+541 2
+
+fl=(30)
+fn=(106)
+cfl=(22)
+cfn=(78)
+calls=4 85
+544 4
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(117)
+calls=10 1164
+549 10
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(117)
+calls=33 1160
+549 33
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(117)
+calls=2 1167
+549 2
+
+fl=(30)
+fn=(106)
+cfl=(30)
+cfn=(117)
+calls=33 1073
+549 33
+
+fl=(30)
+fn=(106)
+555 2
+
+fl=(30)
+fn=(108)
+681 9
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1 692
+682 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=608 699
+682 608
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=645 755
+682 645
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=16 746
+682 16
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=2 749
+682 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=252 750
+682 252
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=117 796
+682 117
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=23 686
+682 23
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=2 706
+682 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1667 770
+682 1667
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=550 703
+682 550
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=5 802
+682 5
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=8 799
+682 8
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1 791
+682 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=4 752
+682 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=27 701
+682 27
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1 710
+682 1
+
+fl=(30)
+fn=(108)
+682 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=2 767
+682 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=4 705
+682 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=12 733
+682 12
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1 695
+682 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=4 739
+682 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=33 736
+682 33
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1 801
+682 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=76 709
+682 76
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=2 742
+682 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=3 788
+682 3
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(108)
+calls=1546 717
+682 1546
+
+fl=(30)
+fn=(108)
+683 5
+
+fl=(30)
+fn=(108)
+686 23
+
+fl=(30)
+fn=(108)
+692 1
+
+fl=(30)
+fn=(108)
+695 1
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(61)
+calls=16 133
+699 16
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(61)
+calls=3 138
+699 3
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(61)
+calls=15 137
+699 15
+
+fl=(30)
+fn=(108)
+699 3
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(61)
+calls=570 135
+699 570
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(61)
+calls=1 136
+699 1
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(59)
+calls=26 77
+701 26
+
+fl=(30)
+fn=(108)
+cfl=(19)
+cfn=(53)
+calls=1 249
+701 1
+
+fl=(30)
+fn=(108)
+703 547
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(73)
+calls=3 399
+703 3
+
+fl=(30)
+fn=(108)
+705 4
+
+fl=(30)
+fn=(108)
+706 2
+
+fl=(30)
+fn=(108)
+cfl=(5)
+cfn=(7)
+calls=76 41
+709 76
+
+fl=(30)
+fn=(108)
+710 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119) CppTrader::Matching::OrderBook::DeleteOrder
+calls=2 216
+717 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=3 1734
+717 3
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=2 197
+717 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=11 1749
+717 11
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=1 211
+717 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=973 210
+717 973
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=410 195
+717 410
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=12 1743
+717 12
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=20 196
+717 20
+
+fl=(30)
+fn=(108)
+717 4
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=27 201
+717 27
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=29 200
+717 29
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=2 190
+717 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=6 1733
+717 6
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=1 192
+717 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=18 206
+717 18
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=18 215
+717 18
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(119)
+calls=4 203
+717 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=1 1740
+717 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=2 1750
+717 2
+
+fl=(30)
+fn=(108)
+cfl=(29)
+cfn=(102)
+calls=8 60
+733 8
+
+fl=(30)
+fn=(108)
+733 4
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(65)
+calls=33 221
+736 33
+
+fl=(30)
+fn=(108)
+739 4
+
+fl=(30)
+fn=(108)
+742 2
+
+fl=(30)
+fn=(108)
+746 4
+
+fl=(30)
+fn=(108)
+cfl=(29)
+cfn=(101)
+calls=12 58
+746 12
+
+fl=(30)
+fn=(108)
+749 2
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(115)
+calls=252 1204
+750 252
+
+fl=(30)
+fn=(108)
+752 4
+
+fl=(30)
+fn=(108)
+cfl=(20)
+cfn=(58)
+calls=645 197
+755 645
+
+fl=(30)
+fn=(108)
+767 2
+
+fl=(30)
+fn=(108)
+770 4
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=3 142
+770 3
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=4 129
+770 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=5 1734
+770 5
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=4 155
+770 4
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=4 144
+770 4
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=8 1749
+770 8
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=1 1737
+770 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=7 143
+770 7
+
+fl=(30)
+fn=(108)
+cfl=(7)
+cfn=(10)
+calls=1 231
+770 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=10 154
+770 10
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=1 138
+770 1
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=269 137
+770 269
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=106 147
+770 106
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=7 134
+770 7
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=4 1743
+770 4
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=1223 131
+770 1223
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(116)
+calls=5 1733
+770 5
+
+fl=(30)
+fn=(108)
+cfl=(24)
+cfn=(10)
+calls=1 148
+770 1
+
+fl=(30)
+fn=(108)
+788 3
+
+fl=(30)
+fn=(108)
+cfl=(22)
+cfn=(78)
+calls=1 85
+791 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=8 1067
+796 8
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=1 1072
+796 1
+
+fl=(30)
+fn=(108)
+796 1
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=3 1167
+796 3
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=9 1160
+796 9
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=5 1073
+796 5
+
+fl=(30)
+fn=(108)
+cfl=(30)
+cfn=(117)
+calls=90 1164
+796 90
+
+fl=(30)
+fn=(108)
+cfl=(9)
+cfn=(26)
+calls=4 156
+799 4
+
+fl=(30)
+fn=(108)
+cfl=(9)
+cfn=(26)
+calls=4 157
+799 4
+
+fl=(30)
+fn=(108)
+801 1
+
+fl=(30)
+fn=(108)
+802 5
+
+fl=(30)
+fn=(107)
+816 25
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=23 832
+817 23
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=1 844
+817 1
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=196 865
+817 196
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=1527 869
+817 1527
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=2 824
+817 2
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=35 821
+817 35
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=117 830
+817 117
+
+fl=(30)
+fn=(107)
+817 7
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=3331 835
+817 3331
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=39 859
+817 39
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=132 862
+817 132
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=22 875
+817 22
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=4550 843
+817 4550
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=24 872
+817 24
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=8 868
+817 8
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=3 874
+817 3
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=3032 828
+817 3032
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=19 836
+817 19
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(107)
+calls=11 840
+817 11
+
+fl=(30)
+fn=(107)
+818 8
+
+fl=(30)
+fn=(107)
+821 35
+
+fl=(30)
+fn=(107)
+824 2
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(61)
+calls=2890 135
+828 2890
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(61)
+calls=52 133
+828 52
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(61)
+calls=86 137
+828 86
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(61)
+calls=4 138
+828 4
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(59)
+calls=115 77
+830 115
+
+fl=(30)
+fn=(107)
+cfl=(19)
+cfn=(53)
+calls=2 249
+830 2
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(73)
+calls=22 399
+832 22
+
+fl=(30)
+fn=(107)
+832 1
+
+fl=(30)
+fn=(107)
+cfl=(5)
+cfn=(7)
+calls=3331 41
+835 3331
+
+fl=(30)
+fn=(107)
+836 19
+
+fl=(30)
+fn=(107)
+840 11
+
+fl=(30)
+fn=(107)
+843 22
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=231 215
+843 231
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=14 197
+843 14
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=10 192
+843 10
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=6 1740
+843 6
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=1652 195
+843 1652
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=462 201
+843 462
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=17 1733
+843 17
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=260 200
+843 260
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=19 216
+843 19
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=13 1750
+843 13
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=1613 210
+843 1613
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=55 196
+843 55
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=15 1734
+843 15
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=8 203
+843 8
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=35 1743
+843 35
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=44 206
+843 44
+
+fl=(30)
+fn=(107)
+cfl=(24)
+cfn=(119)
+calls=20 190
+843 20
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(116)
+calls=54 1749
+843 54
+
+fl=(30)
+fn=(107)
+844 1
+
+fl=(30)
+fn=(107)
+859 22
+
+fl=(30)
+fn=(107)
+cfl=(29)
+cfn=(102)
+calls=17 60
+859 17
+
+fl=(30)
+fn=(107)
+cfl=(20)
+cfn=(65)
+calls=132 221
+862 132
+
+fl=(30)
+fn=(107)
+cfl=(22)
+cfn=(78)
+calls=196 85
+865 196
+
+fl=(30)
+fn=(107)
+868 8
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=31 1067
+869 31
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=411 1164
+869 411
+
+fl=(30)
+fn=(107)
+869 9
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=348 1160
+869 348
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=699 1073
+869 699
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=20 1167
+869 20
+
+fl=(30)
+fn=(107)
+cfl=(30)
+cfn=(117)
+calls=9 1072
+869 9
+
+fl=(30)
+fn=(107)
+cfl=(9)
+cfn=(26)
+calls=11 157
+872 11
+
+fl=(30)
+fn=(107)
+cfl=(9)
+cfn=(26)
+calls=13 156
+872 13
+
+fl=(30)
+fn=(107)
+874 3
+
+fl=(30)
+fn=(107)
+875 22
+
+fl=(30)
+fn=(117)
+1067 83
+
+fl=(30)
+fn=(117)
+1072 18
+
+fl=(30)
+fn=(117)
+1073 803
+
+fl=(30)
+fn=(117)
+1160 486
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120) CppTrader::Matching::MarketManager::ActivateStopOrders
+calls=262 1318
+1164 262
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=80 1322
+1164 80
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=3 1302
+1164 3
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=26 1333
+1164 26
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=13 1305
+1164 13
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=60 1311
+1164 60
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=77 1321
+1164 77
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=164 1329
+1164 164
+
+fl=(30)
+fn=(117)
+1164 9
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=71 1301
+1164 71
+
+fl=(30)
+fn=(117)
+cfl=(30)
+cfn=(120)
+calls=148 1310
+1164 148
+
+fl=(30)
+fn=(117)
+1167 41
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121) CppTrader::Matching::MarketManager::MatchOrder
+calls=1 1283
+1204 1
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=1 1284
+1204 1
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=5 1254
+1204 5
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=2 1260
+1204 2
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=364 1277
+1204 364
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=7 1215
+1204 7
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=37 1298
+1204 37
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=13 1267
+1204 13
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=1164 1214
+1204 1164
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=7 1280
+1204 7
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=1 1271
+1204 1
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=110 1257
+1204 110
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=5 1270
+1204 5
+
+fl=(30)
+fn=(115)
+1204 11
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=13 1248
+1204 13
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=47 1208
+1204 47
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=4 1219
+1204 4
+
+fl=(30)
+fn=(115)
+cfl=(30)
+cfn=(121)
+calls=776 1211
+1204 776
+
+fl=(30)
+fn=(121)
+1208 47
+
+fl=(30)
+fn=(121)
+1211 776
+
+fl=(30)
+fn=(121)
+1214 1164
+
+fl=(30)
+fn=(121)
+1215 7
+
+fl=(30)
+fn=(121)
+1219 4
+
+fl=(30)
+fn=(121)
+1248 13
+
+fl=(30)
+fn=(121)
+1254 5
+
+fl=(30)
+fn=(121)
+cfl=(11)
+cfn=(21)
+calls=110 203
+1257 110
+
+fl=(30)
+fn=(121)
+1260 2
+
+fl=(30)
+fn=(121)
+1267 10
+
+fl=(30)
+fn=(121)
+cfl=(29)
+cfn=(103)
+calls=3 61
+1267 3
+
+fl=(30)
+fn=(121)
+cfl=(9)
+cfn=(24)
+calls=2 141
+1270 2
+
+fl=(30)
+fn=(121)
+cfl=(9)
+cfn=(24)
+calls=3 140
+1270 3
+
+fl=(30)
+fn=(121)
+cfl=(9)
+cfn=(25)
+calls=1 149
+1271 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=6 501
+1277 6
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=151 525
+1277 151
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 555
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=2 482
+1277 2
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=4 519
+1277 4
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 505
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=40 549
+1277 40
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 488
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 477
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=135 468
+1277 135
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=3 476
+1277 3
+
+fl=(30)
+fn=(121)
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 495
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 472
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=1 498
+1277 1
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=6 470
+1277 6
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=2 541
+1277 2
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=4 544
+1277 4
+
+fl=(30)
+fn=(121)
+cfl=(30)
+cfn=(106)
+calls=3 458
+1277 3
+
+fl=(30)
+fn=(121)
+cfl=(29)
+cfn=(103)
+calls=2 61
+1280 2
+
+fl=(30)
+fn=(121)
+1280 5
+
+fl=(30)
+fn=(121)
+cfl=(9)
+cfn=(24)
+calls=1 143
+1283 1
+
+fl=(30)
+fn=(121)
+cfl=(9)
+cfn=(25)
+calls=1 149
+1284 1
+
+fl=(30)
+fn=(121)
+1298 37
+
+fl=(30)
+fn=(120)
+1301 71
+
+fl=(30)
+fn=(120)
+1302 3
+
+fl=(30)
+fn=(120)
+1305 13
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(20)
+calls=45 120
+1310 45
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=3 1339
+1310 3
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=2 1337
+1310 2
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=12 1336
+1310 12
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(20)
+calls=28 121
+1310 28
+
+fl=(30)
+fn=(120)
+1310 50
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=8 1378
+1310 8
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=14 1336
+1311 14
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(20)
+calls=17 121
+1311 17
+
+fl=(30)
+fn=(120)
+1311 21
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=8 1378
+1311 8
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122) CppTrader::Matching::MarketManager::RecalculateTrailingStopPrice
+calls=43 1730
+1318 43
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=38 1648
+1318 38
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=7 1647
+1318 7
+
+fl=(30)
+fn=(120)
+1318 21
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=1 1664
+1318 1
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=11 1650
+1318 11
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=2 1649
+1318 2
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=125 1638
+1318 125
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=6 1639
+1318 6
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=8 1645
+1318 8
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=10 1339
+1321 10
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=2 1378
+1321 2
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=4 1336
+1321 4
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=1 1337
+1321 1
+
+fl=(30)
+fn=(120)
+1321 49
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(18)
+calls=11 114
+1321 11
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(18)
+calls=1 114
+1322 1
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=13 1378
+1322 13
+
+fl=(30)
+fn=(120)
+1322 30
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(120)
+calls=14 1336
+1322 14
+
+fl=(30)
+fn=(120)
+cfl=(9)
+cfn=(18)
+calls=22 113
+1322 22
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=1 1657
+1329 1
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=18 1658
+1329 18
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=49 1638
+1329 49
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=12 1645
+1329 12
+
+fl=(30)
+fn=(120)
+1329 16
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=2 1655
+1329 2
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=4 1664
+1329 4
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=30 1656
+1329 30
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=1 1653
+1329 1
+
+fl=(30)
+fn=(120)
+cfl=(30)
+cfn=(122)
+calls=31 1730
+1329 31
+
+fl=(30)
+fn=(120)
+1333 26
+
+fl=(30)
+fn=(120)
+1336 44
+
+fl=(30)
+fn=(120)
+1337 3
+
+fl=(30)
+fn=(120)
+1339 13
+
+fl=(30)
+fn=(120)
+1378 31
+
+fl=(30)
+fn=(122)
+1638 174
+
+fl=(30)
+fn=(122)
+1639 6
+
+fl=(30)
+fn=(122)
+1645 20
+
+fl=(30)
+fn=(122)
+1647 7
+
+fl=(30)
+fn=(122)
+cfl=(9)
+cfn=(23)
+calls=1 134
+1648 1
+
+fl=(30)
+fn=(122)
+cfl=(9)
+cfn=(23)
+calls=30 135
+1648 30
+
+fl=(30)
+fn=(122)
+1648 7
+
+fl=(30)
+fn=(122)
+1649 2
+
+fl=(30)
+fn=(122)
+1650 11
+
+fl=(30)
+fn=(122)
+1653 1
+
+fl=(30)
+fn=(122)
+1655 2
+
+fl=(30)
+fn=(122)
+cfl=(9)
+cfn=(22)
+calls=14 128
+1656 14
+
+fl=(30)
+fn=(122)
+1656 16
+
+fl=(30)
+fn=(122)
+1657 1
+
+fl=(30)
+fn=(122)
+1658 18
+
+fl=(30)
+fn=(122)
+1664 5
+
+fl=(30)
+fn=(122)
+1730 74
+
+fl=(30)
+fn=(116)
+1733 62
+
+fl=(30)
+fn=(116)
+1734 39
+
+fl=(30)
+fn=(116)
+1737 4
+
+fl=(30)
+fn=(116)
+1740 20
+
+fl=(30)
+fn=(116)
+cfl=(29)
+cfn=(100)
+calls=8 57
+1743 8
+
+fl=(30)
+fn=(116)
+1743 37
+
+fl=(30)
+fn=(116)
+cfl=(29)
+cfn=(99)
+calls=39 56
+1743 39
+
+fl=(30)
+fn=(116)
+cfl=(29)
+cfn=(98)
+calls=11 55
+1743 11
+
+fl=(30)
+fn=(116)
+cfl=(29)
+cfn=(97)
+calls=77 53
+1749 77
+
+fl=(30)
+fn=(116)
+1749 39
+
+fl=(30)
+fn=(116)
+1750 26
+
+fl=(33)
+fn=(113)
+15 45
+
+fl=(33)
+fn=(113)
+18 4
+
+fl=(33)
+fn=(113)
+19 3
+
+fl=(33)
+fn=(113)
+23 1
+
+fl=(33)
+fn=(113)
+26 8
+
+fl=(33)
+fn=(113)
+30 3
+
+fl=(33)
+fn=(113)
+41 3
+
+fl=(33)
+fn=(113)
+44 2
+
+fl=(33)
+fn=(113)
+68 4
+
+fl=(33)
+fn=(113)
+78 5
+
+fl=(24)
+fn=(79)
+cfl=(16)
+cfn=(35)
+calls=1 439
+36 1
+
+fl=(24)
+fn=(79)
+cfl=(16)
+cfn=(35)
+calls=1 428
+36 1
+
+fl=(24)
+fn=(79)
+cfl=(10)
+cfn=(38)
+calls=1 67
+41 1
+
+fl=(24)
+fn=(123) CppTrader::Matching::OrderBook::AddLevel
+cfl=(24)
+cfn=(124) CppTrader::Matching::OrderBook::AddLevel[inline]
+calls=2 80
+66 2
+
+fl=(24)
+fn=(123)
+cfl=(24)
+cfn=(124)
+calls=206 76
+66 206
+
+fl=(24)
+fn=(123)
+cfl=(24)
+cfn=(124)
+calls=51 73
+66 51
+
+fl=(24)
+fn=(123)
+cfl=(24)
+cfn=(124)
+calls=86 79
+66 86
+
+fl=(24)
+fn=(123)
+67 51
+
+fl=(24)
+fn=(123)
+70 26
+
+fl=(24)
+fn=(124)
+cfl=(22)
+cfn=(76)
+calls=9 79
+73 9
+
+fl=(24)
+fn=(124)
+cfl=(22)
+cfn=(76)
+calls=42 75
+73 42
+
+fl=(24)
+fn=(124)
+cfl=(10)
+cfn=(40)
+calls=206 262
+76 206
+
+fl=(24)
+fn=(124)
+79 86
+
+fl=(24)
+fn=(124)
+80 2
+
+fl=(24)
+fn=(123)
+cfl=(22)
+cfn=(76)
+calls=7 79
+85 7
+
+fl=(24)
+fn=(123)
+cfl=(22)
+cfn=(76)
+calls=48 75
+85 48
+
+fl=(24)
+fn=(123)
+cfl=(10)
+cfn=(40)
+calls=210 262
+88 210
+
+fl=(24)
+fn=(123)
+91 68
+
+fl=(24)
+fn=(123)
+92 1
+
+fl=(24)
+fn=(123)
+96 13
+
+fl=(24)
+fn=(125) CppTrader::Matching::OrderBook::DeleteLevel
+99 14
+
+fl=(24)
+fn=(125)
+101 1
+
+fl=(24)
+fn=(125)
+106 1
+
+fl=(24)
+fn=(125)
+107 23
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=3 477
+110 3
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=11 428
+110 11
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=4 401
+110 4
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=499 465
+110 499
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=2 390
+110 2
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=117 404
+110 117
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=28 443
+110 28
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=21 403
+110 21
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=102 437
+110 102
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=6 445
+110 6
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=5 439
+110 5
+
+fl=(24)
+fn=(125)
+cfl=(15)
+cfn=(33)
+calls=4 294
+110 4
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=9 380
+110 9
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=2 449
+110 2
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=159 406
+110 159
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=3 468
+110 3
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 423
+110 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 456
+110 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 441
+110 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=11 417
+110 11
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=198 470
+110 198
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 458
+110 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=2 474
+110 2
+
+fl=(24)
+fn=(125)
+110 38
+
+fl=(24)
+fn=(125)
+116 34
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=5 401
+119 5
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=87 437
+119 87
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=8 428
+119 8
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 449
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=111 406
+119 111
+
+fl=(24)
+fn=(125)
+cfl=(15)
+cfn=(33)
+calls=2 294
+119 2
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 479
+119 1
+
+fl=(24)
+fn=(125)
+119 45
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=2 390
+119 2
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 395
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=204 470
+119 204
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=24 403
+119 24
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=526 465
+119 526
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=161 404
+119 161
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=3 445
+119 3
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=9 468
+119 9
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=47 443
+119 47
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 474
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=11 380
+119 11
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=3 477
+119 3
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 475
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 439
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=1 423
+119 1
+
+fl=(24)
+fn=(125)
+cfl=(10)
+cfn=(47)
+calls=38 417
+119 38
+
+fl=(24)
+fn=(125)
+cfl=(22)
+cfn=(78)
+calls=1 90
+123 1
+
+fl=(24)
+fn=(125)
+cfl=(22)
+cfn=(78)
+calls=66 85
+123 66
+
+fl=(24)
+fn=(125)
+126 7
+
+fl=(24)
+fn=(10)
+129 37
+
+fl=(24)
+fn=(10)
+cfl=(9)
+cfn=(17)
+calls=5255 34
+131 5255
+
+fl=(24)
+fn=(10)
+cfl=(9)
+cfn=(15)
+calls=5430 28
+131 5430
+
+fl=(24)
+fn=(10)
+131 4
+
+fl=(24)
+fn=(10)
+134 47
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=13 96
+137 13
+
+fl=(24)
+fn=(10)
+137 28
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=26 70
+137 26
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=55 85
+137 55
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=1 92
+137 1
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=68 91
+137 68
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=51 67
+137 51
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=210 88
+137 210
+
+fl=(24)
+fn=(10)
+cfl=(24)
+cfn=(123)
+calls=345 66
+137 345
+
+fl=(24)
+fn=(10)
+138 9
+
+fl=(24)
+fn=(10)
+142 26
+
+fl=(24)
+fn=(10)
+143 46
+
+fl=(24)
+fn=(10)
+cfl=(7)
+cfn=(9)
+calls=8 164
+143 8
+
+fl=(24)
+fn=(10)
+144 22
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=5 109
+147 5
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=4 113
+147 4
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=3 108
+147 3
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=2 110
+147 2
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=1 111
+147 1
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=1181 112
+147 1181
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=101 107
+147 101
+
+fl=(24)
+fn=(10)
+cfl=(21)
+cfn=(74)
+calls=275 114
+147 275
+
+fl=(24)
+fn=(10)
+148 8
+
+fl=(24)
+fn=(10)
+cfl=(2)
+cfn=(6)
+calls=73 72
+154 73
+
+fl=(24)
+fn=(10)
+154 18
+
+fl=(24)
+fn=(10)
+155 13
+
+fl=(24)
+fn=(118)
+158 1
+
+fl=(24)
+fn=(118)
+160 1
+
+fl=(24)
+fn=(118)
+163 4
+
+fl=(24)
+fn=(118)
+164 31
+
+fl=(24)
+fn=(118)
+165 1
+
+fl=(24)
+fn=(118)
+168 1
+
+fl=(24)
+fn=(118)
+cfl=(21)
+cfn=(75)
+calls=1 186
+170 1
+
+fl=(24)
+fn=(118)
+cfl=(21)
+cfn=(75)
+calls=53 184
+170 53
+
+fl=(24)
+fn=(118)
+177 2
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=2 123
+181 2
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=42 110
+181 42
+
+fl=(24)
+fn=(118)
+181 1
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=1 106
+181 1
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=1 107
+181 1
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=2 116
+181 2
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=3 99
+181 3
+
+fl=(24)
+fn=(118)
+cfl=(24)
+cfn=(125)
+calls=38 119
+181 38
+
+fl=(24)
+fn=(118)
+cfl=(2)
+cfn=(6)
+calls=4 72
+186 4
+
+fl=(24)
+fn=(118)
+187 1
+
+fl=(24)
+fn=(119)
+190 22
+
+fl=(24)
+fn=(119)
+192 11
+
+fl=(24)
+fn=(119)
+195 2062
+
+fl=(24)
+fn=(119)
+cfl=(7)
+cfn=(9)
+calls=49 164
+196 49
+
+fl=(24)
+fn=(119)
+196 26
+
+fl=(24)
+fn=(119)
+197 16
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=25 191
+200 25
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=3 192
+200 3
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=1 187
+200 1
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=5 183
+200 5
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=4 186
+200 4
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=3 190
+200 3
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=1 188
+200 1
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=1 193
+200 1
+
+fl=(24)
+fn=(119)
+cfl=(21)
+cfn=(75)
+calls=246 184
+200 246
+
+fl=(24)
+fn=(119)
+201 489
+
+fl=(24)
+fn=(119)
+203 12
+
+fl=(24)
+fn=(119)
+206 62
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=1186 110
+210 1186
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=11 99
+210 11
+
+fl=(24)
+fn=(119)
+210 7
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=32 116
+210 32
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=1 101
+210 1
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=22 107
+210 22
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=65 123
+210 65
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=7 126
+210 7
+
+fl=(24)
+fn=(119)
+cfl=(24)
+cfn=(125)
+calls=1255 119
+210 1255
+
+fl=(24)
+fn=(119)
+211 1
+
+fl=(24)
+fn=(119)
+215 13
+
+fl=(24)
+fn=(119)
+cfl=(2)
+cfn=(6)
+calls=236 72
+215 236
+
+fl=(24)
+fn=(119)
+216 21
+
+fl=(31)
+fn=(90)
+17 8
+
+fl=(31)
+fn=(90)
+21 3
+
+fl=(31)
+fn=(90)
+23 21
+
+fl=(31)
+fn=(90)
+cfl=(6)
+cfn=(8)
+calls=5 916
+28 5
+
+fl=(31)
+fn=(90)
+28 15
+
+fl=(31)
+fn=(90)
+cfl=(6)
+cfn=(126) std::vector::push_back[inline]
+calls=3 1191
+30 3
+
+fl=(31)
+fn=(90)
+cfl=(26)
+cfn=(89)
+calls=17 46
+39 17
+
+fl=(31)
+fn=(90)
+39 28
+
+fl=(31)
+fn=(90)
+49 25
+
+fl=(31)
+fn=(90)
+53 50
+
+fl=(31)
+fn=(90)
+58 4
+
+fl=(31)
+fn=(90)
+cfl=(6)
+cfn=(8)
+calls=1 916
+60 1
+
+fl=(31)
+fn=(90)
+cfl=(6)
+cfn=(127) std::vector::insert[inline]
+calls=6 1380
+63 6
+
+fl=(31)
+fn=(90)
+68 14
+
+fl=(31)
+fn=(90)
+cfl=(34) /usr/include/c++/9/bits/vector.tcc
+cfn=(128) std::vector::reserve[inline]
+calls=1 69
+70 1
+
+fl=(31)
+fn=(90)
+70 3
+
+fl=(31)
+fn=(90)
+cfl=(6)
+cfn=(127)
+calls=8 1380
+71 8
+
+fl=(31)
+fn=(129) CppTrader::ITCH::ITCHHandler::ProcessMessage[inline]
+cfl=(31)
+cfn=(130) CppTrader::ITCH::ITCHHandler::ProcessMessage [clone .part.0]
+calls=3575 141
+80 3575
+
+fl=(31)
+fn=(90)
+cfl=(31)
+cfn=(129)
+calls=7792 80
+80 7792
+
+fl=(31)
+fn=(129)
+80 14
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=2 135
+80 2
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=2085 129
+80 2085
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=9876 139
+80 9876
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=10 133
+80 10
+
+fl=(31)
+fn=(90)
+80 19
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=82 157
+80 82
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=6 149
+80 6
+
+fl=(31)
+fn=(90)
+cfl=(31)
+cfn=(129)
+calls=2 105
+80 2
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=35 102
+80 35
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=54 113
+80 54
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=66 110
+80 66
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=180 137
+80 180
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=22 131
+80 22
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=7 143
+80 7
+
+fl=(31)
+fn=(90)
+82 19
+
+fl=(31)
+fn=(90)
+cfl=(31)
+cfn=(129)
+calls=53 105
+87 53
+
+fl=(31)
+fn=(90)
+95 20
+
+fl=(31)
+fn=(90)
+100 2
+
+fl=(31)
+fn=(131) CppTrader::ITCH::ITCHHandler::ProcessMessage
+102 35
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=1 113
+105 1
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=33 139
+105 33
+
+fl=(31)
+fn=(129)
+105 2
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=8 110
+105 8
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=36 129
+105 36
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=1 133
+105 1
+
+fl=(31)
+fn=(129)
+cfl=(31)
+cfn=(130)
+calls=21 141
+105 21
+
+fl=(31)
+fn=(131)
+110 74
+
+fl=(31)
+fn=(131)
+113 55
+
+fl=(31)
+fn=(131)
+129 5893
+
+fl=(31)
+fn=(131)
+131 45
+
+fl=(31)
+fn=(131)
+133 11
+
+fl=(31)
+fn=(131)
+135 2
+
+fl=(31)
+fn=(131)
+137 243
+
+fl=(31)
+fn=(131)
+139 13038
+
+fl=(31)
+fn=(131)
+141 4389
+
+fl=(31)
+fn=(131)
+143 8
+
+fl=(31)
+fn=(131)
+149 6
+
+fl=(31)
+fn=(131)
+157 82
+
+fl=(31)
+fn=(132) CppTrader::ITCH::ITCHHandler::ProcessSystemEventMessage[inline]
+169 55
+
+fl=(31)
+fn=(133) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMessage
+335 71
+
+fl=(31)
+fn=(134) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMessage[inline]
+cfl=(31)
+cfn=(135) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMessage [clone .part.0]
+calls=9294 354
+338 9294
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=1 346
+338 1
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=22 347
+338 22
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=11 348
+338 11
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=38 355
+338 38
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=9 350
+338 9
+
+fl=(31)
+fn=(134)
+338 22
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=5 349
+338 5
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=71 335
+338 71
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=17 345
+338 17
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=20 352
+338 20
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=9 344
+338 9
+
+fl=(31)
+fn=(134)
+cfl=(31)
+cfn=(135)
+calls=7 351
+338 7
+
+fl=(31)
+fn=(133)
+344 9
+
+fl=(31)
+fn=(133)
+345 17
+
+fl=(31)
+fn=(133)
+346 1
+
+fl=(31)
+fn=(133)
+347 7
+
+fl=(31)
+fn=(133)
+347 1
+
+fl=(31)
+fn=(133)
+347 3
+
+fl=(31)
+fn=(133)
+347 11
+
+fl=(31)
+fn=(133)
+348 7
+
+fl=(31)
+fn=(133)
+348 4
+
+fl=(31)
+fn=(133)
+349 5
+
+fl=(31)
+fn=(133)
+350 9
+
+fl=(31)
+fn=(133)
+351 7
+
+fl=(31)
+fn=(133)
+352 19
+
+fl=(31)
+fn=(133)
+352 1
+
+fl=(31)
+fn=(133)
+354 27
+
+fl=(31)
+fn=(133)
+354 18856
+
+fl=(31)
+fn=(133)
+355 38
+
+fl=(31)
+fn=(136) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMPIDMessage
+357 1
+
+fl=(31)
+fn=(137) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMPIDMessage[inline]
+cfl=(31)
+cfn=(138) CppTrader::ITCH::ITCHHandler::ProcessAddOrderMPIDMessage [clone .part.0]
+calls=1 369
+360 1
+
+fl=(31)
+fn=(137)
+cfl=(31)
+cfn=(138)
+calls=1 372
+360 1
+
+fl=(31)
+fn=(137)
+cfl=(31)
+cfn=(138)
+calls=1 357
+360 1
+
+fl=(31)
+fn=(137)
+cfl=(31)
+cfn=(138)
+calls=89 377
+360 89
+
+fl=(31)
+fn=(136)
+369 1
+
+fl=(31)
+fn=(136)
+372 1
+
+fl=(31)
+fn=(136)
+377 152
+
+fl=(31)
+fn=(139) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedMessage
+380 4
+
+fl=(31)
+fn=(140) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedMessage[inline]
+cfl=(31)
+cfn=(141) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedMessage [clone .part.0]
+calls=1 397
+383 1
+
+fl=(31)
+fn=(140)
+cfl=(31)
+cfn=(141)
+calls=1 392
+383 1
+
+fl=(31)
+fn=(140)
+cfl=(31)
+cfn=(141)
+calls=1 398
+383 1
+
+fl=(31)
+fn=(140)
+cfl=(31)
+cfn=(141)
+calls=2 393
+383 2
+
+fl=(31)
+fn=(140)
+cfl=(31)
+cfn=(141)
+calls=4 380
+383 4
+
+fl=(31)
+fn=(140)
+383 2
+
+fl=(31)
+fn=(139)
+392 1
+
+fl=(31)
+fn=(139)
+393 1
+
+fl=(31)
+fn=(139)
+393 1
+
+fl=(31)
+fn=(139)
+397 1
+
+fl=(31)
+fn=(139)
+398 1
+
+fl=(31)
+fn=(142) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedWithPriceMessage
+400 2
+
+fl=(31)
+fn=(143) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedWithPriceMessage[inline]
+cfl=(31)
+cfn=(144) CppTrader::ITCH::ITCHHandler::ProcessOrderExecutedWithPriceMessage [clone .part.0]
+calls=2 400
+403 2
+
+fl=(31)
+fn=(145) CppTrader::ITCH::ITCHHandler::ProcessOrderCancelMessage
+422 1
+
+fl=(31)
+fn=(146) CppTrader::ITCH::ITCHHandler::ProcessOrderCancelMessage[inline]
+425 1
+
+fl=(31)
+fn=(146)
+cfl=(31)
+cfn=(147) CppTrader::ITCH::ITCHHandler::ProcessOrderCancelMessage [clone .part.0]
+calls=1 431
+425 1
+
+fl=(31)
+fn=(146)
+cfl=(31)
+cfn=(147)
+calls=240 438
+425 240
+
+fl=(31)
+fn=(146)
+cfl=(31)
+cfn=(147)
+calls=1 439
+425 1
+
+fl=(31)
+fn=(146)
+cfl=(31)
+cfn=(147)
+calls=1 422
+425 1
+
+fl=(31)
+fn=(146)
+cfl=(31)
+cfn=(147)
+calls=1 435
+425 1
+
+fl=(31)
+fn=(145)
+431 1
+
+fl=(31)
+fn=(145)
+435 1
+
+fl=(31)
+fn=(145)
+438 1
+
+fl=(31)
+fn=(145)
+438 239
+
+fl=(31)
+fn=(145)
+439 1
+
+fl=(31)
+fn=(148) CppTrader::ITCH::ITCHHandler::ProcessOrderDeleteMessage
+441 77
+
+fl=(31)
+fn=(149) CppTrader::ITCH::ITCHHandler::ProcessOrderDeleteMessage[inline]
+cfl=(31)
+cfn=(150) CppTrader::ITCH::ITCHHandler::ProcessOrderDeleteMessage [clone .part.0]
+calls=12 451
+444 12
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=27 453
+444 27
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=26 457
+444 26
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=5 452
+444 5
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=77 441
+444 77
+
+fl=(31)
+fn=(149)
+444 22
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=13129 456
+444 13129
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=7 454
+444 7
+
+fl=(31)
+fn=(149)
+cfl=(31)
+cfn=(150)
+calls=5 450
+444 5
+
+fl=(31)
+fn=(148)
+450 5
+
+fl=(31)
+fn=(148)
+451 12
+
+fl=(31)
+fn=(148)
+452 5
+
+fl=(31)
+fn=(148)
+453 7
+
+fl=(31)
+fn=(148)
+453 11
+
+fl=(31)
+fn=(148)
+453 9
+
+fl=(31)
+fn=(148)
+454 2
+
+fl=(31)
+fn=(148)
+454 5
+
+fl=(31)
+fn=(148)
+456 13150
+
+fl=(31)
+fn=(148)
+456 22
+
+fl=(31)
+fn=(148)
+457 26
+
+fl=(31)
+fn=(151) CppTrader::ITCH::ITCHHandler::ProcessOrderReplaceMessage
+459 20
+
+fl=(31)
+fn=(152) CppTrader::ITCH::ITCHHandler::ProcessOrderReplaceMessage[inline]
+cfl=(31)
+cfn=(153) CppTrader::ITCH::ITCHHandler::ProcessOrderReplaceMessage [clone .part.0]
+calls=5624 477
+462 5624
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=3 473
+462 3
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=1 474
+462 1
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=1 475
+462 1
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=13 478
+462 13
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=1 469
+462 1
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=20 459
+462 20
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=5 471
+462 5
+
+fl=(31)
+fn=(152)
+462 6
+
+fl=(31)
+fn=(152)
+cfl=(31)
+cfn=(153)
+calls=1 468
+462 1
+
+fl=(31)
+fn=(151)
+468 1
+
+fl=(31)
+fn=(151)
+469 1
+
+fl=(31)
+fn=(151)
+471 1
+
+fl=(31)
+fn=(151)
+471 4
+
+fl=(31)
+fn=(151)
+473 3
+
+fl=(31)
+fn=(151)
+474 1
+
+fl=(31)
+fn=(151)
+475 1
+
+fl=(31)
+fn=(151)
+477 5642
+
+fl=(31)
+fn=(151)
+477 6
+
+fl=(31)
+fn=(151)
+478 13
+
+fl=(31)
+fn=(154) CppTrader::ITCH::ITCHHandler::ProcessTradeMessage
+480 2
+
+fl=(31)
+fn=(155) CppTrader::ITCH::ITCHHandler::ProcessTradeMessage[inline]
+cfl=(31)
+cfn=(156) CppTrader::ITCH::ITCHHandler::ProcessTradeMessage [clone .part.0]
+calls=1 498
+483 1
+
+fl=(31)
+fn=(155)
+cfl=(31)
+cfn=(156)
+calls=2 480
+483 2
+
+fl=(31)
+fn=(155)
+cfl=(31)
+cfn=(156)
+calls=2 500
+483 2
+
+fl=(31)
+fn=(155)
+483 2
+
+fl=(31)
+fn=(155)
+cfl=(31)
+cfn=(156)
+calls=1 496
+483 1
+
+fl=(31)
+fn=(154)
+496 1
+
+fl=(31)
+fn=(154)
+498 1
+
+fl=(31)
+fn=(154)
+500 2
+
+fl=(31)
+fn=(157) CppTrader::ITCH::ITCHHandler::ProcessNOIIMessage[inline]
+cfl=(31)
+cfn=(158) CppTrader::ITCH::ITCHHandler::ProcessNOIIMessage [clone .part.0]
+calls=1 553
+546 1
+
+fl=(31)
+fn=(157)
+cfl=(31)
+cfn=(158)
+calls=5 566
+546 5
+
+fl=(31)
+fn=(159) CppTrader::ITCH::ITCHHandler::ProcessNOIIMessage
+553 1
+
+fl=(31)
+fn=(159)
+566 2
+
+fl=(31)
+fn=(159)
+566 3
+
+fl=(35) /usr/include/c++/9/bits/alloc_traits.h
+fn=(160) std::allocator_traits::deallocate[inline]
+cfl=(36) /usr/include/c++/9/ext/new_allocator.h
+cfn=(161) __gnu_cxx::new_allocator::deallocate[inline]
+calls=2 128
+470 2
+
+fl=(18)
+fn=(50)
+193 10
+
+fl=(18)
+fn=(50)
+194 11
+
+fl=(18)
+fn=(50)
+195 1
+
+fl=(11)
+fn=(21)
+198 45
+
+fl=(11)
+fn=(21)
+203 110
+
+fl=(11)
+fn=(19)
+222 12
+
+fl=(11)
+fn=(162) std::__copy_move::__copy_m[inline]
+385 1
+
+fl=(11)
+fn=(162)
+cfl=??
+cfn=(95)
+calls=10 0
+386 10
+
+fl=(11)
+fn=(162)
+386 1
+
+fl=(11)
+fn=(162)
+cfl=??
+cfn=(163) __nss_database_lookup
+calls=54 0
+386 54
+
+fl=(11)
+fn=(164) std::__copy_move_a[inline]
+cfl=(11)
+cfn=(162)
+calls=1 385
+404 1
+
+fl=(11)
+fn=(164)
+cfl=(11)
+cfn=(162)
+calls=65 386
+404 65
+
+fl=(11)
+fn=(165) std::__copy_move_a2[inline]
+cfl=(11)
+cfn=(164)
+calls=66 404
+440 66
+
+fl=(11)
+fn=(166) std::copy[inline]
+cfl=(11)
+cfn=(165)
+calls=66 440
+474 66
+
+fl=(17)
+fn=(167) std::pair::pair[inline]
+342 19
+
+fl=(17)
+fn=(46)
+cfl=(17)
+cfn=(167)
+calls=19 342
+529 19
+
+fl=(37) /usr/include/c++/9/bits/stl_uninitialized.h
+fn=(168) std::__uninitialized_fill_n::__uninit_fill_n[inline]
+221 2
+
+fl=(37)
+fn=(168)
+cfl=(38) /usr/include/c++/9/new
+cfn=(169) std::_Construct[inline]
+calls=16 174
+222 16
+
+fl=(37)
+fn=(170) std::uninitialized_fill_n[inline]
+cfl=(37)
+cfn=(168)
+calls=16 222
+273 16
+
+fl=(37)
+fn=(170)
+cfl=(37)
+cfn=(168)
+calls=2 221
+273 2
+
+fl=(37)
+fn=(171) std::__uninitialized_fill_n_a[inline]
+cfl=(37)
+cfn=(170)
+calls=18 273
+384 18
+
+fl=(6)
+fn=(172) std::_Vector_base::~_Vector_base[inline]
+cfl=(6)
+cfn=(173) std::_Vector_base::_M_deallocate[inline]
+calls=1 351
+332 1
+
+fl=(6)
+fn=(173)
+cfl=(35)
+cfn=(160)
+calls=2 470
+351 2
+
+fl=(6)
+fn=(52)
+cfl=(6)
+cfn=(172)
+calls=1 332
+680 1
+
+fl=(6)
+fn=(8)
+916 3014
+
+fl=(6)
+fn=(56)
+cfl=(34)
+cfn=(174) std::vector::_M_fill_insert
+calls=18 566
+957 18
+
+fl=(6)
+fn=(68)
+1043 29
+
+fl=(6)
+fn=(126)
+1191 3
+
+fl=(6)
+fn=(127)
+cfl=(6)
+cfn=(175) std::vector::_M_insert_dispatch[inline]
+calls=14 1662
+1380 14
+
+fl=(6)
+fn=(175)
+cfl=(34)
+cfn=(176) std::vector::_M_range_insert
+calls=13 721
+1662 13
+
+fl=(6)
+fn=(175)
+cfl=(34)
+cfn=(176)
+calls=1 725
+1662 1
+
+fl=(34)
+fn=(128)
+69 1
+
+fl=(34)
+fn=(174)
+cfl=(37)
+cfn=(171)
+calls=18 384
+566 18
+
+fl=(34)
+fn=(176)
+721 13
+
+fl=(34)
+fn=(176)
+725 1
+
+fl=(36)
+fn=(161)
+cfl=??
+cfn=(177) __munmap
+calls=2 0
+128 2
+
+fl=(38)
+fn=(169)
+174 16
+
+fl=(32)
+fn=(178) std::operator<<
+570 1
+
+fl=(28)
+fn=(92)
+297 14
+
+fl=(28)
+fn=(93)
+cfl=??
+cfn=(179) fread
+calls=3696 0
+297 3696
+
+fl=(28)
+fn=(93)
+cfl=??
+cfn=(95)
+calls=1 0
+297 1
+
+fl=(13)
+fn=(133)
+34 1
+
+fl=(13)
+fn=(30)
+34 6
+
+fl=(13)
+fn=(154)
+34 1
+
+fl=??
+fn=(180) _IO_file_write
+cfl=??
+cfn=(181) _IO_file_read
+calls=2 0
+0 2
+
+fl=??
+fn=(182) __sbrk
+cfl=??
+cfn=brk
+calls=6 0
+0 6
+
+fl=??
+fn=(179)
+cfl=??
+cfn=(180)
+calls=3634 0
+0 3634
+
+fl=??
+fn=(183) std::__ostream_insert
+0 1
+
+fl=??
+fn=(184) __libc_start_main
+cfl=(29)
+cfn=(109)
+calls=238 160
+0 238
+
+fl=??
+fn=(185) __default_morecore
+cfl=??
+cfn=(182)
+calls=6 0
+0 6
+
+fl=??
+fn=(94)
+0 23
+
+fl=??
+fn=(84)
+cfl=??
+cfn=(84)
+calls=6 0
+0 6
+
+fl=??
+fn=(186) _IO_sgetn
+0 12
+
+fl=??
+fn=(84)
+0 2
+
+fl=??
+fn=(179)
+0 50
+
+fl=??
+fn=(84)
+cfl=??
+cfn=(185)
+calls=6 0
+0 6
+
+fl=??
+fn=(82)
+cfl=??
+cfn=(84)
+calls=6 0
+0 6
+
+fl=??
+fn=(184)
+cfl=(29)
+cfn=(109)
+calls=63 157
+0 63
+
+fl=??
+fn=(163)
+0 54
+
+fl=??
+fn=(177)
+0 2
+
+fl=??
+fn=(95)
+0 12
+
+fl=??
+fn=(180)
+0 36
+
+fl=??
+fn=(184)
+cfl=(29)
+cfn=(109)
+calls=1 174
+0 1
+
+fl=??
+fn=(180)
+cfl=??
+cfn=(187) __read
+calls=3596 0
+0 3596
+
+fl=??
+fn=(187)
+0 3596
+
+fl=??
+fn=brk
+0 6
+
+fl=??
+fn=(179)
+cfl=??
+cfn=(186)
+calls=12 0
+0 12
+
+fl=??
+fn=(181)
+0 2
+

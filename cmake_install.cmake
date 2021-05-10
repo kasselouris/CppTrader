@@ -218,6 +218,30 @@ file(INSTALL DESTINATION "/home/apostolis/Desktop/CppTrader/bin" TYPE EXECUTABLE
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching"
+         RPATH "")
+  endif()
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/apostolis/Desktop/CppTrader/bin" TYPE EXECUTABLE FILES "/home/apostolis/Desktop/CppTrader/cpptrader-performance-matching")
+  if(EXISTS "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching_engine" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/apostolis/Desktop/CppTrader/bin/cpptrader-performance-matching_engine")
     file(RPATH_CHECK

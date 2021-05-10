@@ -51,7 +51,28 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/cpptrader-example-matching_engine",
-            "args": ["<", "/home/apostolis/Desktop/itch_files/test"],
+            "args": ["<", "${workspaceFolder}/tools/matching/scenario-04.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "C/C++: g++ build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "(gdb) Launch example-matching",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/cpptrader-example-matching",
+            "args": ["<", "/home/apostolis/Desktop/python_scripts/lobster_scenario.txt"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
