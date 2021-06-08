@@ -24,4 +24,5 @@ Makefile
 CMakeFiles
 *.a
 cpptrader-*
+timestamps*
 

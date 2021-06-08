@@ -20,7 +20,48 @@
 #include <ctime>  
 #include <vector>
 
+
+// Server side C/C++ program to demonstrate Socket programming
+#include <signal.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/socket.h>
+#include <stdlib.h>
+#include <netinet/in.h>
+#include <string.h>
+#define PORT 8080
+
 using namespace CppTrader::Matching;
+
+uint64_t timestamp_start = 0;
+
+uint64_t current_prossesing_time = 0;
+uint64_t total_prossesing_time = 0;
+uint64_t max_prossesing_time = 0;
+uint64_t min_prossesing_time = 9999999999;
+
+uint64_t current_timestamp = CppCommon::Timestamp::nano();
+uint64_t previous_timestamp = current_timestamp;
+std::vector<uint64_t> measurements_vector;
+
+//global
+size_t global_updates = 0;
+size_t global_symbols = 0;
+size_t global_max_symbols = 0;
+size_t global_order_books = 0;
+size_t global_max_order_books = 0;
+size_t global_max_order_book_levels = 0;
+size_t global_max_order_book_orders = 0;
+size_t global_orders = 0;
+size_t global_max_orders = 0;
+size_t global_add_orders = 0;
+size_t global_update_orders = 0;
+size_t global_delete_orders = 0;
+size_t global_execute_orders = 0;
+size_t global_total_messages = 0;
+
+//Turn synchronisation to false because I don't use C I/O libraries making my code faster
+//std::ios::sync_with_stdio(false);
 
 class MyMarketHandler : public MarketHandler
 {
@@ -55,18 +96,30 @@ public:
     size_t total_messages() const { return _total_messages; }
 
 protected:
-    void onAddSymbol(const Symbol& symbol) override { ++_updates; ++_symbols; _max_symbols = std::max(_symbols, _max_symbols); ++_total_messages; }
-    void onDeleteSymbol(const Symbol& symbol) override { ++_updates; --_symbols; ++_total_messages; }
-    void onAddOrderBook(const OrderBook& order_book) override { ++_updates; ++_order_books; _max_order_books = std::max(_order_books, _max_order_books); ++_total_messages; }
-    void onUpdateOrderBook(const OrderBook& order_book, bool top) override { _max_order_book_levels = std::max(std::max(order_book.bids().size(), order_book.asks().size()), _max_order_book_levels); }
-    void onDeleteOrderBook(const OrderBook& order_book) override { ++_updates; --_order_books; ++_total_messages; }
-    void onAddLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; }
-    void onUpdateLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; _max_order_book_orders = std::max(level.Orders, _max_order_book_orders); }
-    void onDeleteLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; }
-    void onAddOrder(const Order& order) override { ++_updates; ++_orders; _max_orders = std::max(_orders, _max_orders); ++_add_orders; ++_total_messages; }
-    void onUpdateOrder(const Order& order) override { ++_updates; ++_update_orders; }
-    void onDeleteOrder(const Order& order) override { ++_updates; --_orders; ++_delete_orders; }
-    void onExecuteOrder(const Order& order, uint64_t price, uint64_t quantity) override { ++_updates; ++_execute_orders; }
+    void onAddSymbol(const Symbol& symbol) override { ++_updates; ++_symbols; _max_symbols = std::max(_symbols, _max_symbols); ++_total_messages;
+        ++global_updates; ++global_symbols; global_max_symbols = _max_symbols; ++global_total_messages;}
+    void onDeleteSymbol(const Symbol& symbol) override { ++_updates; --_symbols; ++_total_messages; 
+        ++global_updates; ++global_symbols;  ++global_total_messages;}
+    void onAddOrderBook(const OrderBook& order_book) override { ++_updates; ++_order_books; _max_order_books = std::max(_order_books, _max_order_books); ++_total_messages; 
+        ++global_updates; ++global_order_books; global_max_order_books = _max_order_books; ++global_total_messages;}
+    void onUpdateOrderBook(const OrderBook& order_book, bool top) override { _max_order_book_levels = std::max(std::max(order_book.bids().size(), order_book.asks().size()), _max_order_book_levels);
+        global_max_order_book_levels = _max_order_book_levels; }
+    void onDeleteOrderBook(const OrderBook& order_book) override { ++_updates; --_order_books; ++_total_messages; 
+        ++global_updates; --global_order_books; ++global_total_messages; }
+    void onAddLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; 
+        ++global_updates; }
+    void onUpdateLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; _max_order_book_orders = std::max(level.Orders, _max_order_book_orders);
+        ++global_updates; global_max_order_book_orders = _max_order_book_orders; }
+    void onDeleteLevel(const OrderBook& order_book, const Level& level, bool top) override { ++_updates; 
+        ++global_updates; }
+    void onAddOrder(const Order& order) override { ++_updates; ++_orders; _max_orders = std::max(_orders, _max_orders); ++_add_orders; ++_total_messages; 
+        ++global_updates; ++global_orders; global_max_orders = _max_orders; ++global_add_orders; ++global_total_messages; }
+    void onUpdateOrder(const Order& order) override { ++_updates; ++_update_orders; 
+        ++global_updates; ++global_update_orders;}
+    void onDeleteOrder(const Order& order) override { ++_updates; --_orders; ++_delete_orders; 
+        ++global_updates; --global_orders; ++global_delete_orders;}
+    void onExecuteOrder(const Order& order, uint64_t price, uint64_t quantity) override { ++_updates; ++_execute_orders; 
+        ++global_updates; ++global_execute_orders;}
 
 private:
     size_t _updates;
@@ -610,138 +663,20 @@ void DeleteOrder(MarketManager& market, const std::string& command)
     std::cerr << "Invalid 'delete order' command: " << command << std::endl;
 }
 
-int main(int argc, char** argv)
-{
-    MyMarketHandler market_handler;
-    MarketManager market(market_handler);
-
-    uint64_t current_prossesing_time = 0;
-    uint64_t total_prossesing_time = 0;
-    uint64_t max_prossesing_time = 0;
-    uint64_t min_prossesing_time = 9999999999;
-
-    uint64_t current_timestamp = CppCommon::Timestamp::nano();
-    uint64_t previous_timestamp = current_timestamp;
-    std::vector<uint64_t> measurements_vector;
-
-    //Turn synchronisation to false because I don't use C I/O libraries making my code faster
-    std::ios::sync_with_stdio(false);
-
-    uint64_t timestamp_start = CppCommon::Timestamp::nano();
-    // Perform text input
-    std::string line;
-    while (getline(std::cin, line))
-    {
-        if (line == "help")
-        {
-            std::cout << "Supported commands: " << std::endl;
-            std::cout << "add symbol {Id} {Name} - Add a new symbol with {Id} and {Name}" << std::endl;
-            std::cout << "delete symbol {Id} - Delete the symbol with {Id}" << std::endl;
-            std::cout << "add book {Id} - Add a new order book for the symbol with {Id}" << std::endl;
-            std::cout << "delete book {Id} - Delete the order book with {Id}" << std::endl;
-            std::cout << "add market {Side} {Id} {SymbolId} {Quantity} - Add a new market order of {Type} (buy/sell) with {Id}, {SymbolId} and {Quantity}" << std::endl;
-            std::cout << "add slippage market {Side} {Id} {SymbolId} {Quantity} {Slippage} - Add a new slippage market order of {Type} (buy/sell) with {Id}, {SymbolId}, {Quantity} and {Slippage}" << std::endl;
-            std::cout << "add limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
-            std::cout << "add ioc limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'Immediate-Or-Cancel' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
-            std::cout << "add fok limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'Fill-Or-Kill' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
-            std::cout << "add aon limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'All-Or-None' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
-            std::cout << "add stop {Side} {Id} {SymbolId} {StopPrice} {Quantity} - Add a new stop order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice} and {Quantity}" << std::endl;
-            std::cout << "add stop-limit {Side} {Id} {SymbolId} {StopPrice} {Price} {Quantity} - Add a new stop-limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Price} and {Quantity}" << std::endl;
-            std::cout << "add trailing stop {Side} {Id} {SymbolId} {StopPrice} {Quantity} {TrailingDistance} {TrailingStep} - Add a new trailing stop order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Quantity}, {TrailingDistance} and {TrailingStep}" << std::endl;
-            std::cout << "add trailing stop-limit {Side} {Id} {SymbolId} {StopPrice} {Price} {Quantity} {TrailingDistance} {TrailingStep} - Add a new trailing stop-limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Price}, {Quantity}, {TrailingDistance} and {TrailingStep}" << std::endl;
-            std::cout << "reduce order {Id} {Quantity} - Reduce the order with {Id} by the given {Quantity}" << std::endl;
-            std::cout << "modify order {Id} {NewPrice} {NewQuantity} - Modify the order with {Id} and set {NewPrice} and {NewQuantity}" << std::endl;
-            std::cout << "mitigate order {Id} {NewPrice} {NewQuantity} - Mitigate the order with {Id} and set {NewPrice} and {NewQuantity}" << std::endl;
-            std::cout << "replace order {Id} {NewId} {NewPrice} {NewQuantity} - Replace the order with {Id} and set {NewId}, {NewPrice} and {NewQuantity}" << std::endl;
-            std::cout << "delete order {Id} - Delete the order with {Id}" << std::endl;
-            std::cout << "exit/quit - Exit the program" << std::endl;
-        }
-        else if ((line == "exit") || (line == "quit"))
-            break;
-        else if ((line.find("#") == 0) || (line == ""))
-            continue;
-        else if (line == "enable matching"){
-            market.EnableMatching(); 
-            continue;
-        }
-        else if (line == "disable matching"){
-            market.DisableMatching(); 
-            continue;
-        }
-        else if (line.find("add symbol") != std::string::npos)
-            AddSymbol(market, line);
-        else if (line.find("delete symbol") != std::string::npos)
-            DeleteSymbol(market, line);
-        else if (line.find("add book") != std::string::npos)
-            AddOrderBook(market, line);
-        else if (line.find("delete book") != std::string::npos)
-            DeleteOrderBook(market, line);
-        else if (line.find("add market") != std::string::npos)
-            AddMarketOrder(market, line);
-        else if (line.find("add slippage market") != std::string::npos)
-            AddSlippageMarketOrder(market, line);
-        else if (line.find("add limit") != std::string::npos)
-            AddLimitOrder(market, line);
-        else if (line.find("add ioc limit") != std::string::npos)
-            AddIOCLimitOrder(market, line);
-        else if (line.find("add fok limit") != std::string::npos)
-            AddFOKLimitOrder(market, line);
-        else if (line.find("add aon limit") != std::string::npos)
-            AddAONLimitOrder(market, line);
-        else if (line.find("add stop-limit") != std::string::npos)
-            AddStopLimitOrder(market, line);
-        else if (line.find("add stop") != std::string::npos)
-            AddStopOrder(market, line);
-        else if (line.find("add trailing stop-limit") != std::string::npos)
-            AddTrailingStopLimitOrder(market, line);
-        else if (line.find("add trailing stop") != std::string::npos)
-            AddTrailingStopOrder(market, line);
-        else if (line.find("reduce order") != std::string::npos)
-            ReduceOrder(market, line);
-        else if (line.find("modify order") != std::string::npos)
-            ModifyOrder(market, line);
-        else if (line.find("mitigate order") != std::string::npos)
-            MitigateOrder(market, line);
-        else if (line.find("replace order") != std::string::npos)
-            ReplaceOrder(market, line);
-        else if (line.find("delete order") != std::string::npos)
-            DeleteOrder(market, line);
-        else
-            std::cerr << "Unknown command: "  << line << std::endl;
-        
-        //timestamps
-        previous_timestamp = current_timestamp;
-        current_timestamp = CppCommon::Timestamp::nano();
-
-        //take current measurements
-        measurements_vector.push_back(current_timestamp);
-
-        //response time stats
-        current_prossesing_time = current_timestamp - previous_timestamp;
-        total_prossesing_time += current_prossesing_time;
-        if(current_prossesing_time > max_prossesing_time){
-            max_prossesing_time = current_prossesing_time;
-        }
-        else if(current_prossesing_time < min_prossesing_time){
-            min_prossesing_time = current_prossesing_time;
-        }
-    }
+static void handler(int signo){
     uint64_t timestamp_stop = CppCommon::Timestamp::nano();
-
-    size_t total_messages = market_handler.total_messages();
-    size_t total_updates = market_handler.updates();
 
     //Print results
     std::cout << "Processing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(timestamp_stop - timestamp_start) << std::endl;
     std::cout << std::endl;
-    std::cout << "Total market updates: " << total_updates << std::endl;
-    std::cout << "Market update latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / total_updates) << std::endl;
-    std::cout << "Market update throughput: " << total_updates * 1000000000 / (timestamp_stop - timestamp_start) << " upd/s" << std::endl;
+    std::cout << "Total market updates: " << global_updates << std::endl;
+    std::cout << "Market update latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / global_updates) << std::endl;
+    std::cout << "Market update throughput: " << global_updates * 1000000000 / (timestamp_stop - timestamp_start) << " upd/s" << std::endl;
     std::cout << std::endl;
-    std::cout << "Total messages: " << total_messages << std::endl;
-    std::cout << "Message latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / total_messages) << std::endl;
-    std::cout << "Mean throughput: " << total_messages * 1000000000 / (timestamp_stop - timestamp_start) << " msg/s" << std::endl;
-    std::cout << "Mean Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(total_prossesing_time / total_messages) << "/msg" << std::endl;
+    std::cout << "Total messages: " << global_total_messages << std::endl;
+    std::cout << "Message latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / global_total_messages) << std::endl;
+    std::cout << "Mean throughput: " << global_total_messages * 1000000000 / (timestamp_stop - timestamp_start) << " msg/s" << std::endl;
+    std::cout << "Mean Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(total_prossesing_time / global_total_messages) << "/msg" << std::endl;
     std::cout << "Max Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(max_prossesing_time) << "/msg" << std::endl;
     std::cout << "Min Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(min_prossesing_time) << "/msg" << std::endl;
 
@@ -749,19 +684,19 @@ int main(int argc, char** argv)
     std::cout << std::endl;
 
     std::cout << "Market statistics: " << std::endl;
-    std::cout << "Max symbols: " << market_handler.max_symbols() << std::endl;
-    std::cout << "Max order books: " << market_handler.max_order_books() << std::endl;
-    std::cout << "Max order book levels: " << market_handler.max_order_book_levels() << std::endl;
-    std::cout << "Max order book orders: " << market_handler.max_order_book_orders() << std::endl;
-    std::cout << "Max orders: " << market_handler.max_orders() << std::endl;
+    std::cout << "Max symbols: " << global_max_symbols << std::endl;
+    std::cout << "Max order books: " << global_max_order_books << std::endl;
+    std::cout << "Max order book levels: " << global_max_order_book_levels << std::endl;
+    std::cout << "Max order book orders: " << global_max_order_book_orders << std::endl;
+    std::cout << "Max orders: " << global_max_orders << std::endl;
 
     std::cout << std::endl;
 
     std::cout << "Order statistics: " << std::endl;
-    std::cout << "Add order operations: " << market_handler.add_orders() << std::endl;
-    std::cout << "Update order operations: " << market_handler.update_orders() << std::endl;
-    std::cout << "Delete order operations: " << market_handler.delete_orders() << std::endl;
-    std::cout << "Execute order operations: " << market_handler.execute_orders() << std::endl;
+    std::cout << "Add order operations: " << global_add_orders << std::endl;
+    std::cout << "Update order operations: " << global_update_orders << std::endl;
+    std::cout << "Delete order operations: " << global_delete_orders << std::endl;
+    std::cout << "Execute order operations: " << global_execute_orders << std::endl;
     
 
     //output measurements
@@ -771,6 +706,166 @@ int main(int argc, char** argv)
 		output_file << measurements_vector[i] << std::endl;
     }
     output_file.close();
+    
+    kill(getpid(),SIGKILL);
+}
+
+int main(int argc, char** argv)
+{
+    MyMarketHandler market_handler;
+    MarketManager market(market_handler);
+
+    //server
+    int server_fd, new_socket, size;
+    struct sockaddr_in address;
+    int opt = 1;
+    int addrlen = sizeof(address);
+    char buffer[1024] = {0};
+
+    signal(SIGTSTP, handler); //Control+Z signal
+       
+    // Creating socket file descriptor
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0){
+        perror("socket failed");
+        exit(EXIT_FAILURE);
+    }
+       
+    // Forcefully attaching socket to the port 8080
+    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+        perror("setsockopt");
+        exit(EXIT_FAILURE);
+    }
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons( PORT );
+       
+    // Forcefully attaching socket to the port 8080
+    if (bind(server_fd, (struct sockaddr *)&address, sizeof(address))<0){
+        perror("bind failed");
+        exit(EXIT_FAILURE);
+    }
+    if (listen(server_fd, 4) < 0){ //Number is MAX PENDING CONNECTIONS
+        perror("listen");
+        exit(EXIT_FAILURE);
+    }
+    if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0){
+        perror("accept");
+        exit(EXIT_FAILURE);
+    }
+
+    timestamp_start = CppCommon::Timestamp::nano();
+    // Perform text input
+    std::string line;
+    while(1){
+        size = read(new_socket , buffer, 1024);
+        size+=1;
+        char *ptr = strtok(buffer, "\n"); //parse at \n
+        while(ptr) { //while token was found
+            if(line == ptr) //if line(previous) == ptr(current)
+                continue;   //Pending for new messages
+            else
+                line = ptr;
+            //printf("%s\n", ptr);
+            ptr = strtok(NULL, "\n");
+            
+
+            if (line == "help")
+            {
+                std::cout << "Supported commands: " << std::endl;
+                std::cout << "add symbol {Id} {Name} - Add a new symbol with {Id} and {Name}" << std::endl;
+                std::cout << "delete symbol {Id} - Delete the symbol with {Id}" << std::endl;
+                std::cout << "add book {Id} - Add a new order book for the symbol with {Id}" << std::endl;
+                std::cout << "delete book {Id} - Delete the order book with {Id}" << std::endl;
+                std::cout << "add market {Side} {Id} {SymbolId} {Quantity} - Add a new market order of {Type} (buy/sell) with {Id}, {SymbolId} and {Quantity}" << std::endl;
+                std::cout << "add slippage market {Side} {Id} {SymbolId} {Quantity} {Slippage} - Add a new slippage market order of {Type} (buy/sell) with {Id}, {SymbolId}, {Quantity} and {Slippage}" << std::endl;
+                std::cout << "add limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
+                std::cout << "add ioc limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'Immediate-Or-Cancel' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
+                std::cout << "add fok limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'Fill-Or-Kill' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
+                std::cout << "add aon limit {Side} {Id} {SymbolId} {Price} {Quantity} - Add a new 'All-Or-None' limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {Price} and {Quantity}" << std::endl;
+                std::cout << "add stop {Side} {Id} {SymbolId} {StopPrice} {Quantity} - Add a new stop order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice} and {Quantity}" << std::endl;
+                std::cout << "add stop-limit {Side} {Id} {SymbolId} {StopPrice} {Price} {Quantity} - Add a new stop-limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Price} and {Quantity}" << std::endl;
+                std::cout << "add trailing stop {Side} {Id} {SymbolId} {StopPrice} {Quantity} {TrailingDistance} {TrailingStep} - Add a new trailing stop order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Quantity}, {TrailingDistance} and {TrailingStep}" << std::endl;
+                std::cout << "add trailing stop-limit {Side} {Id} {SymbolId} {StopPrice} {Price} {Quantity} {TrailingDistance} {TrailingStep} - Add a new trailing stop-limit order of {Type} (buy/sell) with {Id}, {SymbolId}, {StopPrice}, {Price}, {Quantity}, {TrailingDistance} and {TrailingStep}" << std::endl;
+                std::cout << "reduce order {Id} {Quantity} - Reduce the order with {Id} by the given {Quantity}" << std::endl;
+                std::cout << "modify order {Id} {NewPrice} {NewQuantity} - Modify the order with {Id} and set {NewPrice} and {NewQuantity}" << std::endl;
+                std::cout << "mitigate order {Id} {NewPrice} {NewQuantity} - Mitigate the order with {Id} and set {NewPrice} and {NewQuantity}" << std::endl;
+                std::cout << "replace order {Id} {NewId} {NewPrice} {NewQuantity} - Replace the order with {Id} and set {NewId}, {NewPrice} and {NewQuantity}" << std::endl;
+                std::cout << "delete order {Id} - Delete the order with {Id}" << std::endl;
+                std::cout << "exit/quit - Exit the program" << std::endl;
+            }
+            else if ((line == "exit") || (line == "quit"))
+                break;
+            else if ((line.find("#") == 0) || (line == ""))
+                continue;
+            else if (line == "enable matching"){
+                market.EnableMatching(); 
+                continue;
+            }
+            else if (line == "disable matching"){
+                market.DisableMatching(); 
+                continue;
+            }
+            else if (line.find("add symbol") != std::string::npos)
+                AddSymbol(market, line);
+            else if (line.find("delete symbol") != std::string::npos)
+                DeleteSymbol(market, line);
+            else if (line.find("add book") != std::string::npos)
+                AddOrderBook(market, line);
+            else if (line.find("delete book") != std::string::npos)
+                DeleteOrderBook(market, line);
+            else if (line.find("add market") != std::string::npos)
+                AddMarketOrder(market, line);
+            else if (line.find("add slippage market") != std::string::npos)
+                AddSlippageMarketOrder(market, line);
+            else if (line.find("add limit") != std::string::npos)
+                AddLimitOrder(market, line);
+            else if (line.find("add ioc limit") != std::string::npos)
+                AddIOCLimitOrder(market, line);
+            else if (line.find("add fok limit") != std::string::npos){
+                std::cout << line << std::endl;
+                AddFOKLimitOrder(market, line);
+            }
+            else if (line.find("add aon limit") != std::string::npos)
+                AddAONLimitOrder(market, line);
+            else if (line.find("add stop-limit") != std::string::npos)
+                AddStopLimitOrder(market, line);
+            else if (line.find("add stop") != std::string::npos)
+                AddStopOrder(market, line);
+            else if (line.find("add trailing stop-limit") != std::string::npos)
+                AddTrailingStopLimitOrder(market, line);
+            else if (line.find("add trailing stop") != std::string::npos)
+                AddTrailingStopOrder(market, line);
+            else if (line.find("reduce order") != std::string::npos)
+                ReduceOrder(market, line);
+            else if (line.find("modify order") != std::string::npos)
+                ModifyOrder(market, line);
+            else if (line.find("mitigate order") != std::string::npos)
+                MitigateOrder(market, line);
+            else if (line.find("replace order") != std::string::npos)
+                ReplaceOrder(market, line);
+            else if (line.find("delete order") != std::string::npos)
+                DeleteOrder(market, line);
+            else
+                std::cerr << "Unknown command: "  << line << std::endl;
+            
+            //timestamps
+            previous_timestamp = current_timestamp;
+            current_timestamp = CppCommon::Timestamp::nano();
+
+            //take current measurements
+            measurements_vector.push_back(current_timestamp);
+
+            //response time stats
+            current_prossesing_time = current_timestamp - previous_timestamp;
+            total_prossesing_time += current_prossesing_time;
+            if(current_prossesing_time > max_prossesing_time){
+                max_prossesing_time = current_prossesing_time;
+            }
+            else if(current_prossesing_time < min_prossesing_time){
+                min_prossesing_time = current_prossesing_time;
+            }
+        }
+    }
 
     return 0;
 }

@@ -437,6 +437,7 @@ protected:
     virtual bool onMessage(const RPIIMessage& message) { return true; }
     virtual bool onMessage(const LULDAuctionCollarMessage& message) { return true; }
     virtual bool onMessage(const UnknownMessage& message) { return true; }
+    virtual void updateMeasurements(uint64_t current_time) { return; }
 
 private:
     size_t _size;
@@ -464,6 +465,7 @@ private:
     bool ProcessRPIIMessage(void* buffer, size_t size);
     bool ProcessLULDAuctionCollarMessage(void* buffer, size_t size);
     bool ProcessUnknownMessage(void* buffer, size_t size);
+    //void updateMeasurements(uint64_t current_time);
 
     template <size_t N>
     size_t ReadString(const void* buffer, char (&str)[N]);

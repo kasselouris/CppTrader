@@ -7,6 +7,7 @@
 */
 
 #include "trader/providers/nasdaq/itch_handler.h"
+#include "time/timestamp.h"
 
 #include <cassert>
 
@@ -15,6 +16,8 @@ namespace ITCH {
 
 bool ITCHHandler::Process(void* buffer, size_t size)
 {
+    uint64_t current_timestamp = 0;
+
     size_t index = 0;
     uint8_t* data = (uint8_t*)buffer;
 
@@ -93,6 +96,9 @@ bool ITCHHandler::Process(void* buffer, size_t size)
 
             // Process the next message
             _size = 0;
+            //timestamps
+            current_timestamp = CppCommon::Timestamp::nano();
+            updateMeasurements(current_timestamp);
         }
     }
 

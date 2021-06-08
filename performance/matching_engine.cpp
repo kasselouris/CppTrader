@@ -12,9 +12,24 @@
 
 #include <OptionParser.h>
 
+#include <iostream>
+#include <fstream>
+#include <chrono>
+#include <ctime>  
+#include <vector>
+
 using namespace CppCommon;
 using namespace CppTrader::ITCH;
 using namespace CppTrader::Matching;
+
+uint64_t current_prossesing_time = 0;
+uint64_t total_prossesing_time = 0;
+uint64_t max_prossesing_time = 0;
+uint64_t min_prossesing_time = 9999999999;
+
+uint64_t current_timestamp = CppCommon::Timestamp::nano();
+uint64_t previous_timestamp = current_timestamp;
+std::vector<uint64_t> measurements_vector;
 
 class MyMarketHandler : public MarketHandler
 {
@@ -82,28 +97,30 @@ public:
     explicit MyITCHHandler(MarketManager& market)
         : _market(market),
           _messages(0),
-          _errors(0)
+          _errors(0),
+          _real_messages(0)
     {}
 
     size_t messages() const { return _messages; }
     size_t errors() const { return _errors; }
+    size_t real_messages() const { return _real_messages;}
 
 protected:
     bool onMessage(const SystemEventMessage& message) override { ++_messages; return true; }
-    bool onMessage(const StockDirectoryMessage& message) override { ++_messages; Symbol symbol(message.StockLocate, message.Stock); _market.AddSymbol(symbol); _market.AddOrderBook(symbol); return true; }
+    bool onMessage(const StockDirectoryMessage& message) override { ++_messages; ++_real_messages; Symbol symbol(message.StockLocate, message.Stock); _market.AddSymbol(symbol); _market.AddOrderBook(symbol); return true; }
     bool onMessage(const StockTradingActionMessage& message) override { ++_messages; return true; }
     bool onMessage(const RegSHOMessage& message) override { ++_messages; return true; }
     bool onMessage(const MarketParticipantPositionMessage& message) override { ++_messages; return true; }
     bool onMessage(const MWCBDeclineMessage& message) override { ++_messages; return true; }
     bool onMessage(const MWCBStatusMessage& message) override { ++_messages; return true; }
     bool onMessage(const IPOQuotingMessage& message) override { ++_messages; return true; }
-    bool onMessage(const AddOrderMessage& message) override { ++_messages; _market.AddOrder(Order::Limit(message.OrderReferenceNumber, message.StockLocate, (message.BuySellIndicator == 'B') ? OrderSide::BUY : OrderSide::SELL, message.Price, message.Shares)); return true; }
-    bool onMessage(const AddOrderMPIDMessage& message) override { ++_messages; _market.AddOrder(Order::Limit(message.OrderReferenceNumber, message.StockLocate, (message.BuySellIndicator == 'B') ? OrderSide::BUY : OrderSide::SELL, message.Price, message.Shares)); return true; }
+    bool onMessage(const AddOrderMessage& message) override { ++_messages; ++_real_messages; _market.AddOrder(Order::Limit(message.OrderReferenceNumber, message.StockLocate, (message.BuySellIndicator == 'B') ? OrderSide::BUY : OrderSide::SELL, message.Price, message.Shares)); return true; }
+    bool onMessage(const AddOrderMPIDMessage& message) override { ++_messages; ++_real_messages; _market.AddOrder(Order::Limit(message.OrderReferenceNumber, message.StockLocate, (message.BuySellIndicator == 'B') ? OrderSide::BUY : OrderSide::SELL, message.Price, message.Shares)); return true; }
     bool onMessage(const OrderExecutedMessage& message) override { ++_messages; return true; }
     bool onMessage(const OrderExecutedWithPriceMessage& message) override { ++_messages; return true; }
-    bool onMessage(const OrderCancelMessage& message) override { ++_messages; _market.ReduceOrder(message.OrderReferenceNumber, message.CanceledShares); return true; }
-    bool onMessage(const OrderDeleteMessage& message) override { ++_messages; _market.DeleteOrder(message.OrderReferenceNumber); return true; }
-    bool onMessage(const OrderReplaceMessage& message) override { ++_messages; _market.ReplaceOrder(message.OriginalOrderReferenceNumber, message.NewOrderReferenceNumber, message.Price, message.Shares); return true; }
+    bool onMessage(const OrderCancelMessage& message) override { ++_messages; ++_real_messages; _market.ReduceOrder(message.OrderReferenceNumber, message.CanceledShares); return true; }
+    bool onMessage(const OrderDeleteMessage& message) override { ++_messages; ++_real_messages; _market.DeleteOrder(message.OrderReferenceNumber); return true; }
+    bool onMessage(const OrderReplaceMessage& message) override { ++_messages; ++_real_messages; _market.ReplaceOrder(message.OriginalOrderReferenceNumber, message.NewOrderReferenceNumber, message.Price, message.Shares); return true; }
     bool onMessage(const TradeMessage& message) override { ++_messages; return true; }
     bool onMessage(const CrossTradeMessage& message) override { ++_messages; return true; }
     bool onMessage(const BrokenTradeMessage& message) override { ++_messages; return true; }
@@ -111,11 +128,30 @@ protected:
     bool onMessage(const RPIIMessage& message) override { ++_messages; return true; }
     bool onMessage(const LULDAuctionCollarMessage& message) override { ++_messages; return true; }
     bool onMessage(const UnknownMessage& message) override { ++_errors; return true; }
+    void updateMeasurements(uint64_t current_time) override { 
+        //timestamps
+        previous_timestamp = current_timestamp;
+        current_timestamp = CppCommon::Timestamp::nano();
+
+        //take current measurements
+        measurements_vector.push_back(current_timestamp);
+
+        //response time stats
+        current_prossesing_time = current_timestamp - previous_timestamp;
+        total_prossesing_time += current_prossesing_time;
+        if(current_prossesing_time > max_prossesing_time){
+            max_prossesing_time = current_prossesing_time;
+        }
+        else if(current_prossesing_time < min_prossesing_time){
+            min_prossesing_time = current_prossesing_time;
+        }
+    }
 
 private:
     MarketManager& _market;
     size_t _messages;
     size_t _errors;
+    size_t _real_messages;
 };
 
 int main(int argc, char** argv)
@@ -170,14 +206,21 @@ int main(int argc, char** argv)
 
     size_t total_messages = itch_handler.messages();
     size_t total_updates = market_handler.updates();
+    size_t real_messages = itch_handler.real_messages();
 
     std::cout << "Processing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(timestamp_stop - timestamp_start) << std::endl;
     std::cout << "Total ITCH messages: " << total_messages << std::endl;
+    std::cout << "Total actual used ITCH messages: " << real_messages << std::endl;
+    std::cout << std::endl;
     std::cout << "ITCH message latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / total_messages) << std::endl;
     std::cout << "ITCH message throughput: " << total_messages * 1000000000 / (timestamp_stop - timestamp_start) << " msg/s" << std::endl;
     std::cout << "Total market updates: " << total_updates << std::endl;
     std::cout << "Market update latency: " << CppBenchmark::ReporterConsole::GenerateTimePeriod((timestamp_stop - timestamp_start) / total_updates) << std::endl;
     std::cout << "Market update throughput: " << total_updates * 1000000000 / (timestamp_stop - timestamp_start) << " upd/s" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Mean Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(total_prossesing_time / total_messages) << "/msg" << std::endl;
+    std::cout << "Max Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(max_prossesing_time) << "/msg" << std::endl;
+    std::cout << "Min Prossesing time: " << CppBenchmark::ReporterConsole::GenerateTimePeriod(min_prossesing_time) << "/msg" << std::endl;
 
     std::cout << std::endl;
 
@@ -195,6 +238,14 @@ int main(int argc, char** argv)
     std::cout << "Update order operations: " << market_handler.update_orders() << std::endl;
     std::cout << "Delete order operations: " << market_handler.delete_orders() << std::endl;
     std::cout << "Execute order operations: " << market_handler.execute_orders() << std::endl;
+
+    //output measurements
+    std::ofstream output_file;
+    output_file.open("timestamps_itch.txt");
+    for(size_t i=0; i < measurements_vector.size(); i++){
+		output_file << measurements_vector[i] << std::endl;
+    }
+    output_file.close();
 
     return 0;
 }
